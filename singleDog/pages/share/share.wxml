@@ -1,0 +1,84 @@
+<!--pages/share/share.wxml-->
+<import src="../../template/singDog/singDog.wxml" />
+<view class='share_index'>
+  <template is="tem_sing" data="{{back}}" />
+
+  <block wx:if="{{myLogin == 1}}">
+    <view class='sing_test_box'>
+      <canvas class="poster" style='width: 100%;height: {{screenH}}px;' canvas-id="poster"></canvas>
+    </view>
+
+    <block wx:if="{{share_switch == 0}}">
+      <view class='position_box footer_box'>
+        <view class='box box-lr box-pack-around'>
+          <view class='flex1'>
+            <view class='share_btn'>
+              <button class='share' open-type='share' style='line-height: normal'>
+                <image class='sing_test_03_img' src='../../static/images/sing_test_03.png'></image>
+              </button>
+            </view>
+          </view>
+          <view class='flex1'>
+            <block wx:if="{{authFlag}}">
+              <view class=''>
+                <button class='openSetting' open-type='openSetting' bindopensetting="toOpen" style='line-height: normal'>
+                  <image class='sing_test_04_img' bindtap='savePhoto' src='../../static/images/sing_test_04.png'></image>
+                </button>
+              </view>
+            </block>
+            <block wx:else>
+              <view class='share_btn'>
+                <image class='sing_test_04_img' bindtap='savePhoto' src='../../static/images/sing_test_04.png'></image>
+              </view>
+            </block>
+          </view>
+        </view>
+
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class='position_box index_01_box'>
+      <image class='sing01_img' src='../../static/images/sing01.png'></image>
+    </view>
+
+    <!-- 昵称 -->
+    <view class='position_box user_nike_box'>
+      <input class='input_nike' type='text' placeholder='请输入名字' maxlength='15' bindinput="getUserNike" value='{{user_nike}}'></input>
+    </view>
+
+    <!-- 选择年限 -->
+    <view class='position_box year_box'>
+      <picker class='picker' mode="date" fields="year" value='1990' start="1900" end="2012" bindchange="bindDateChange">
+        <view>
+          {{user_date}}
+        </view>
+      </picker>
+    </view>
+
+    <!-- 事件按钮 -->
+    <view class='position_box sing02_box'>
+      <block wx:if="{{userLogin}}">
+        <image class='sing02_img' bindtap='toSingDog' src='../../static/images/sing02.png'></image>
+      </block>
+      <block wx:else>
+        <view class='sing02_box_w'>
+          <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindtap='closeUserInfo' bindgetuserinfo="getUserInfo">
+            <image class='sing02_img' src='../../static/images/sing02.png'></image>
+          </button>
+        </view>
+      </block>
+    </view>
+    <view class='position_box more_box'>
+      <view class='more_btn'>
+        <navigator target="miniProgram" app-id="{{jump_url}}" path="{{jump_path}}" version="release" hover-class="none">
+          <image class='more_img' src='../../static/images/more.png'></image>
+        </navigator>
+      </view>
+    </view>
+  </block>
+</view>
+
+<cover-view class='loading-box' wx:if="{{isLoading}}">
+  <cover-image class='loding_img' src='../../static/images/loding.gif'></cover-image>
+</cover-view>

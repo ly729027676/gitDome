@@ -1,0 +1,41 @@
+<!--pages/singDog_test/singDog_test.wxml-->
+<import src="../../template/singDog/singDog.wxml" />
+<view class='sing_test_wrap position_r'>
+  <template is="tem_sing" />
+
+  <view class='sing_test_box'>
+    <canvas class="poster" style='width: 100%;height: {{screenH}}px;' canvas-id="poster"></canvas>
+  </view>
+
+  <view class='position_box footer_box'>
+    <view class='box box-lr box-pack-around'>
+      <view class='flex1'>
+        <view class='share_btn'>
+          <button class='share' open-type='share' style='line-height: normal'>
+            <image class='sing_test_03_img' src='../../static/images/sing_test_03.png'></image>
+          </button>
+        </view>
+      </view>
+      <view class='flex1'>
+        <block wx:if="{{authFlag}}">
+          <view class=''>
+            <button class='openSetting' open-type='openSetting' bindopensetting="toOpen" style='line-height: normal'>
+              <image class='sing_test_04_img' bindtap='savePhoto' src='../../static/images/sing_test_04.png'></image>
+            </button>
+          </view>
+        </block>
+        <block wx:else>
+          <view class='share_btn'>
+            <image class='sing_test_04_img' bindtap='savePhoto' src='../../static/images/sing_test_04.png'></image>
+          </view>
+        </block>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+<view class='loading-box' wx:if="{{isLoading}}">
+  <image class='loding_img' src='../../static/images/loding.gif'></image>
+</view>

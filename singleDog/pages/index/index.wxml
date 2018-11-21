@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<import src="../../template/singDog/singDog.wxml" />
+<view class='index_wrap position_r'>
+  <template is="tem_sing"  data="{{back}}"/>
+
+  <view class='position_box index_01_box'>
+    <image class='sing01_img' src='../../static/images/sing01.png'></image>
+  </view>
+
+  <!-- 昵称 -->
+    <view class='position_box user_nike_box'>
+      <input class='input_nike' type='text' placeholder='请输入名字' maxlength='15' bindinput="getUserNike" value='{{user_nike}}'></input>
+    </view>
+
+      <!-- 选择年限 -->
+    <view class='position_box year_box'>
+      <picker class='picker' mode="date" fields="year" value='1990' start="1900" end="2012" bindchange="bindDateChange">
+        <view>
+          {{user_date}}
+        </view>
+      </picker>
+    </view>
+
+  <!-- 事件按钮 -->
+  <view class='position_box sing02_box'>
+    <block wx:if="{{userLogin}}">
+      <image class='sing02_img' bindtap='toSingDog' src='../../static/images/sing02.png'></image>
+    </block>
+    <block wx:else>
+      <view class='sing02_box_w'>
+        <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindtap='closeUserInfo' bindgetuserinfo="getUserInfo">
+          <image class='sing02_img' src='../../static/images/sing02.png'></image>
+        </button>
+      </view>
+    </block>
+  </view>
+  <view class='position_box more_box'>
+    <view class='more_btn'>
+      <navigator target="miniProgram" app-id="{{jump_url}}" path="{{jump_path}}" version="release" hover-class="none">
+        <image class='more_img' src='../../static/images/more.png'></image>
+      </navigator>
+    </view>
+  </view>
+</view>

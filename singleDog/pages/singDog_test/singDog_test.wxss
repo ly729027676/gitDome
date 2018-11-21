@@ -1,0 +1,51 @@
+/* pages/singDog_test/singDog_test.wxss */
+@import "../../template/singDog/singDog.wxss";
+
+.sing_test_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sing_test_box {
+  position: absolute;
+  top: 13%;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.sing_test_btn {
+  top: 85%;
+}
+
+.sing_test_02_img, .sing_test_03_img, .sing_test_04_img {
+  width: 290rpx;
+  height: 82rpx;
+  margin: 0 auto;
+}
+
+.footer_box {
+  top: 87%;
+}
+
+.share_btn {
+  width: 290rpx;
+  height: 82rpx;
+  margin: 0 auto;
+}
+
+.share {
+  background: transparent;
+  padding: 0;
+}
+
+button::after {
+  border: none;
+}
+
+.openSetting {
+  background: transparent;
+}

@@ -1,0 +1,21 @@
+<template name="tem_sing">
+  <image class='page_bg_img' src='../../static/images/sing_bg.png'></image>
+
+  <!-- 左上角箭头 -->
+  <block wx:if="{{back == 1}}">
+    <view class='index_left' bindtap='toIndex'>
+      <image class='back_img' style='top: 5%' src='../../static/images/back.png'></image>
+    </view>
+  </block>
+  <block wx:elif="{{back == 2}}">
+  </block>
+  <block wx:else>
+    <view class='index_left' bindtap='toBack'>
+      <view class='facing-left'></view>
+    </view>
+  </block>
+  <!-- 标题 -->
+  <view class='index_title'>
+    单身狗原因
+  </view>
+</template>

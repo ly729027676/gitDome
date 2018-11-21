@@ -1,0 +1,9 @@
+/* pages/share/share.wxss */
+@import '../index/index.wxss';
+@import '../singDog_test/singDog_test.wxss';
+
+.share_index {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

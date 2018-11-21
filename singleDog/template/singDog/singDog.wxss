@@ -1,0 +1,25 @@
+.page_bg_img {
+  width: 100%;
+  height: 100%;
+}
+
+.index_left {
+  position: absolute;
+  top: 5.1%;
+  left: 5%;
+  z-index: 10;
+  width: 4%;
+}
+
+.index_title {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.back_img {
+  width: 42rpx;
+  height: 38rpx;
+}
