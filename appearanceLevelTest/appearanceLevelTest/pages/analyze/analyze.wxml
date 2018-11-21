@@ -1,0 +1,94 @@
+<view class='analyze_wrap position_r'>
+  <view class='analyze_box'>
+    <image class='analyze_bg_img' src='../../../static/images/analyze_bg.png'></image>
+  </view>
+
+  <!-- 上传按钮图片 -->
+  <block wx:if="{{face_shape_dict.img_path}}">
+    <view class='upfile_box' style='top: {{upfile_top}}%;height: {{upfile_height}}%'>
+      <image class='upfile_bg_img' src='{{imgUrl}}{{face_shape_dict.img_path}}'></image>
+      <!-- 扫描动画 -->
+      <view class='scan_box {{aniFlag ? "scan_box_ani" : ""}}'>
+        <image class='scan_ani_img' src='../../../static/images/scan_ani.png'></image>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='analyze_no_bg'>
+      <image class='analyze_no_bg_img' src='../../../static/images/analyze_no_bg.png'></image>
+    </view>
+  </block>
+
+  <!-- 人脸位置 -->
+  <view class='face_box' style='top: {{face_top}}%;left: {{face_left}}%;height: {{upfile_height}}%'>
+    <block wx:for="{{face_shape_dict.point_dict}}" wx:key="this">
+      <block wx:for="{{item.face_profile}}" wx:key="this">
+        <view class='face_item {{show_eye3 ? "show_face_item" : ""}}' style='transform: translate({{item.x * cx}}rpx, {{item.y * cy}}rpx)'></view>
+      </block>
+      <block wx:for="{{item.left_eyebrow}}" wx:key="this">
+        <view class='face_item {{show_eye ? "show_face_item" : ""}}' style='transform: translate({{item.x * cx}}rpx, {{item.y * cy}}rpx)'></view>
+      </block>
+      <block wx:for="{{item.right_eyebrow}}" wx:key="this">
+        <view class='face_item {{show_eye ? "show_face_item" : ""}}' style='transform: translate({{item.x * cx}}rpx, {{item.y * cy}}rpx)'></view>
+      </block>
+      <block wx:for="{{item.left_eye}}" wx:key="this">
+        <view class='face_item {{show_eye ? "show_face_item" : ""}}' style='transform: translate({{item.x * cx}}rpx, {{item.y * cy}}rpx)'></view>
+      </block>
+      <block wx:for="{{item.right_eye}}" wx:key="this">
+        <view class='face_item {{show_eye ? "show_face_item" : ""}}' style='transform: translate({{item.x * cx}}rpx, {{item.y * cy}}rpx)'></view>
+      </block>
+
+      <block wx:for="{{item.mouth}}" wx:key="this">
+        <view class='face_item {{show_eye2 ? "show_face_item" : ""}}' style='transform: translate({{item.x * cx}}rpx, {{item.y * cy}}rpx)'></view>
+      </block>
+      <block wx:for="{{item.nose}}" wx:key="this">
+        <view class='face_item {{show_eye2 ? "show_face_item" : ""}}' style='transform: translate({{item.x * cx}}rpx, {{item.y * cy}}rpx)'></view>
+      </block>
+    </block>
+  </view>
+
+  <!-- 分析结果 -->
+  <view class='result_msg_box' wx-if='{{result_msg}}'>
+    您的照片正在检测中...
+  </view>
+
+  <view class='result_msg_box' wx-if='{{!aniFlag}}'>
+    <view class='upPhone_box' bindtap='toIndex'>
+      <image class='upPhone_img' src='../../../static/images/upPhone.png'></image>
+    </view>
+  </view>
+
+  <view class='result_box animat' animation="{{animationData}}">
+    <image class='analyze_border_img' src='../../../static/images/analyze_border.png'></image>
+    <view class='result_msg'>
+      {{face_shape_dict.forecast_word_1}}
+    </view>
+  </view>
+  <view class='result_box2 result_box animat' animation="{{animationData2}}">
+    <image class='analyze_border_img' src='../../../static/images/analyze_border.png'></image>
+    <view class='result_msg'>
+      {{face_shape_dict.data_type_1}}
+    </view>
+  </view>
+  <view class='result_box3 result_box animat' animation="{{animationData3}}">
+    <image class='analyze_border_img' src='../../../static/images/analyze_border.png'></image>
+    <view class='result_msg'>
+      {{face_shape_dict.praise_word_1}}
+    </view>
+  </view>
+  <view class='result_box4 result_box animat' animation="{{animationData4}}">
+    <image class='analyze_border_img' src='../../../static/images/analyze_border.png'></image>
+    <view class='result_msg'>
+      {{face_shape_dict.data_type_2}}
+    </view>
+  </view>
+
+  <view class='fail_box' wx:if="{{showFail}}">
+    <image class='upPhone_no_img' src='../../../static/images/upPhone_no.png'></image>
+  </view>
+</view>
+
+
+<view class='loading-box' wx:if="{{isLoading}}">
+  <image class='loding_img' src='../../../static/images/loading.gif'></image>
+</view>

@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "颜值测试",
+    "navigationBarTextStyle":"black"
+  },
+  "subpackages": [
+    {
+      "root": "appearanceLevelTest",
+      "pages": [
+        "pages/analyze/analyze",
+        "pages/result/result"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "appearanceLevelTest"
+      ]
+    }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

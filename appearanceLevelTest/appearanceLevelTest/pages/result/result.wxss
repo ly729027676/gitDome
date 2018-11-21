@@ -1,0 +1,60 @@
+.result_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.result_box {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+}
+
+.result_bg_img {
+  width: 100%;
+  height: 100%;
+}
+
+.sava_box {
+  position: absolute;
+  top: 0;
+  right: 14%;
+  z-index: 5;
+}
+
+.sava_img {
+  width: 178rpx;
+  height: 178rpx;
+}
+
+.openSetting {
+  background: transparent;
+}
+
+.btn_box {
+  position: absolute;
+  top: 91%;
+  left: 0;
+  z-index: 5;
+  padding: 0 60rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.share_box, .index_box {
+  width: 298rpx;
+  margin: 0 auto;
+}
+
+.share_img, .index_img {
+  width: 298rpx;
+  height: 69rpx;
+}
+
+.share {
+  background: transparent;
+  padding: 0;
+}

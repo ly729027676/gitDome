@@ -1,0 +1,206 @@
+.analyze_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.analyze_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1560rpx;
+  z-index: 5;
+}
+
+.face_item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7rpx;
+  height: 7rpx;
+  border-radius: 60%;
+  background: #ffffff;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.show_face_item {
+  opacity: 1
+}
+
+.analyze_bg_img {
+  width: 100%;
+  height: 100%;
+}
+
+.upfile_box {
+  position: absolute;
+  top: 16%;
+  left: 0;
+  width: 100%;
+  height: 38.5%;
+  text-align: center;
+  z-index: 1;
+}
+
+.upfile_bg_img {
+  width: 464rpx;
+  height: 100%;
+}
+
+.result_box {
+  position: absolute;
+  top: 58%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}
+
+.result_box2 {
+  top: 68%;
+}
+
+.result_box3 {
+  top: 78%;
+}
+
+.result_box4 {
+  top: 88%;
+}
+
+.result_msg {
+  position: absolute;
+  top: 22%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  color: #fff;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.analyze_border_img {
+  width: 654rpx;
+  height: 61rpx;
+  margin: 0 auto;
+}
+
+.scan_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(-260px);
+  transform: translateY(-260px);
+}
+
+.scan_box_ani {
+  -webkit-animation: scanAni 3s linear 500ms infinite alternate;
+  animation: scanAni 3s linear 500ms infinite alternate;
+}
+
+@keyframes scanAni {
+  0% {
+    transform: translateY(-260px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(260px);
+  }
+}
+
+@-webkit-keyframes scanAni {
+  0% {
+    transform: translateY(-260px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(260px);
+  }
+}
+
+.upPhone_box {
+  width: 380rpx;
+  height: 88rpx;
+  margin: 0 auto;
+}
+
+.upPhone_img {
+  width: 100%;
+  height: 100%;
+}
+
+.result_msg_box {
+  position: absolute;
+  top: 73%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  color: #fff;
+  font-size: 38rpx;
+}
+
+.scan_ani_img {
+  width: 460rpx;
+  height: 308rpx;
+}
+
+.animat, .animat1 {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateX(800px);
+  transform: translateX(800px);
+}
+
+.face_box {
+  position: absolute;
+  z-index: 1;
+}
+
+.fail_box {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: -136rpx;
+  text-align: center;
+  z-index: 11;
+}
+
+.upPhone_no_img {
+  width: 272rpx;
+  height: 162rpx;
+}
+
+.analyze_no_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1560rpx;
+  z-index: 1;
+}
+
+.analyze_no_bg_img {
+  width: 100%;
+  height: 100%;
+}

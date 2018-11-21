@@ -1,0 +1,45 @@
+<view class='result_wrap position_r'>
+  <image class='result_bg_img' src='../../../static/images/result_bg.png'></image>
+
+  <view class='result_box' style='top: {{result_top}}%'>
+    <canvas class="poster" style='width: {{screenw}}px; height: {{screenH}}px' canvas-id="poster"></canvas>
+  </view>
+
+  <block wx:if="{{isSava}}">
+    <cover-view class='sava_box' style='margin-top: {{ipX_top}}rpx;'>
+      <block wx:if="{{autehFlag}}">
+        <cover-view class='sava_btn_box'>
+          <button class='openSetting' open-type='openSetting' bindopensetting="toOpen" style='line-height: normal'>
+            <cover-image class='sava_img' src='../../../static/images/sava.png'></cover-image>
+          </button>
+        </cover-view>
+      </block>
+      <block wx:else>
+        <cover-image class='sava_img' bindtap='savePhoto' src='../../../static/images/sava.png'></cover-image>
+      </block>
+    </cover-view>
+  </block>
+
+  <block wx:if="{{share_button == 0}}">
+    <view class='btn_box' style="top: {{btn_top}}%">
+      <view class='box box-lr'>
+        <view class='flex1'>
+          <view class='share_box'>
+            <button class='share' open-type='share'>
+              <image class='share_img' src='../../../static/images/share.png'></image>
+            </button>
+          </view>
+        </view>
+        <view class='flex1'>
+          <view class='index_box' bindtap='toIndex'>
+            <image class='index_img' src='../../../static/images/index.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class='loading-box' wx:if="{{isLoading}}">
+  <image class='loding_img' src='../../../static/images/loading.gif'></image>
+</view>

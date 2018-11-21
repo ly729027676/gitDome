@@ -1,0 +1,107 @@
+<!--index.wxml-->
+<view class="index_wrap position_r">
+  <!-- <view style='position: absolute;top:0;left:0;z-index:5;'>
+    <button bindtap='toAnalyze'>开启颜值测试{{hasUserInfo}}</button>
+  </view>
+  <view style='position: absolute;top:10%;left:0;z-index:5;'>
+    <button bindtap='toResult'>结果页{{hasUserInfo}}</button>
+  </view> -->
+  <view class='index_down_box'>
+    <image class='index_down_img' src='../../static/images/index_down.png'></image>
+  </view>
+
+  <view class='index_bg_box'>
+    <image class='index_bg_img' src='../../static/images/index_bg.png' bindload='imageUtil'></image>
+  </view>
+
+  <!-- 上传按钮图片 -->
+  <view class='upfile_box' style='z-index: {{zIndex}};top: {{upfile_top}}%;height: {{upfile_height}}%'>
+    <image class='upfile_bg_img' mode='scaleToFill' src='{{upfile_img}}'></image>
+  </view>
+  <view class='upfile_opcity_box' style='top: {{upfile_top}}%;height: {{upfile_height}}%'>
+    <image class='upfile_bg_img' bindtap='upImages' src='../../static/images/upfile_bg.png'></image>
+  </view>
+
+  <!-- 姓名 -->
+  <view class='input_name_box' style='top: {{name_top}}%'>
+    <image class='input_bg_img' src='../../static/images/input_bg.png'></image>
+    <view class='input_pis_box'>
+      <view class='input_pis'>
+        <input class='input_text' type='text' bindinput="getUserName" placeholder-style='color:#ff005a' value='{{user_name}}' placeholder='请输入姓名'></input>
+      </view>
+    </view>
+  </view>
+
+  <!-- 性别 -->
+  <view class='sex_box' style='top: {{sex_top}}%'>
+    <image class='input_bg_img' src='../../static/images/input_bg.png'></image>
+    <view class='sex_picker_box'>
+      <picker mode="selector" range="{{sexArry}}" value='{{index}}' bindchange="getUserSex">
+        <view class='picker'>
+          <block wx:if="{{index == 100}}">
+            性别
+          </block>
+          <block wx:else>
+            {{sexArry[index]}}
+          </block>
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 开始测试颜值 -->
+  <view class='star_btn_box' style='top: {{star_top}}%'>
+    <block wx:if="{{hasUserInfo}}">
+      <image bindtap='toAnalyze' class='start_img' src='../../static/images/start.png'></image>
+    </block>
+    <block wx:else>
+      <view class='btn_box'>
+        <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+          <image class='start_img' src='../../static/images/start.png'></image>
+        </button>
+      </view>
+    </block>
+  </view>
+
+  <view class='cropper-content' wx:if="{{isShowImg}}">
+    <view class='draw_bg_box'>
+        <image class='draw_bg_img' src='../../static/images/draw_bg.png'></image>
+      </view>
+    <view class="wx-corpper" style="width:{{cropperInitW}}px;height:{{cropperInitH}}px;">
+      <view class="wx-corpper-content" style="width:{{cropperW}}rpx;height:{{cropperH}}rpx;left:{{cropperL}}rpx;top:{{cropperT}}rpx">
+        <image src="{{imageSrc}}" style="width:{{cropperW}}rpx;height:{{cropperH}}rpx"></image>
+        <view class="wx-corpper-crop-box" bindtouchstart="contentStartMove" bindtouchmove="contentMoveing" bindtouchend="contentTouchEnd" style="left:{{cutL}}rpx;top:{{cutT}}rpx;right:{{cutR}}rpx;bottom:{{cutB}}rpx">
+          <view class="wx-cropper-view-box">
+            <view class="wx-cropper-dashed-h"></view>
+            <view class="wx-cropper-dashed-v"></view>
+ 
+            <view class="wx-cropper-point point-tr" data-drag="topRight" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+           
+            <view class="wx-cropper-point point-rb" data-drag="rightBottom" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+         
+            <view class="wx-cropper-point point-bl" data-drag="bottomLeft" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+           
+            <view class="wx-cropper-point point-lt" data-drag="leftTop" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='cropper_box' wx:if="{{isShowImg}}">
+    <view class='box box-lr'>
+      <view class='flex1'>
+        <view class='close_box' bindtap='closeBtn'>
+          <image class='close_img' src='../../static/images/close.png'></image>
+        </view>
+      </view>
+      <view class='flex1'>
+        <view class='tailor_box' bindtap='getImageInfo'>
+          <image class='tailor_img' src='../../static/images/tailor.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <canvas canvas-id="myCanvas" style="position:absolute;border: 1px solid red; width:{{qualityWidth}}px;height:{{qualityWidth/innerAspectRadio}}px;top:-9999px;left:-9999px;"></canvas>
+</view>

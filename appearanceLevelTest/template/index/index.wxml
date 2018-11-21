@@ -1,0 +1,3 @@
+<template is="tem_index">
+  <button bindtap='toIndex'>成功加载到我了</button>
+</template>
