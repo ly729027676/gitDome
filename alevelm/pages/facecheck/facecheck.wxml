@@ -1,0 +1,82 @@
+<!--pages/facecheck.wxml-->
+<view class='facecheck_wrap'>
+  <canvas class="poster" style='width: 100%; height: {{screenH}}px' canvas-id="poster"></canvas>
+
+  <!-- <view class='big_wrap'>
+    <view class='big_box'>
+      <view class='position_r big_img_box'>
+        <image class="btn_bg_img" src='../../static/images/btn_bg.png'></image>
+        <view class='index_box'>
+          <view class='index_box_w' bindtap='toIndex'>
+            <image class="index_img" src='../../static/images/index.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <block wx:if="{{pageFlag == 0 || pageFlag == 2}}">
+    <view class='result_index_box position_r'>
+      <image class="btn_bg_img" src='../../static/images/btn_bg.png'></image>
+      <view class='index_box'>
+        <view class='index_box_w' bindtap='toIndex'>
+          <image class="index_img" src='../../static/images/index.png'></image>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='result_index_box position_r'>
+      <image class="btn_bg_img" src='../../static/images/btn_bg.png'></image>
+      <view class='index_box'>
+        <view class='index_box_w' bindtap='toIndex'>
+          <image class="index02_img" src='../../static/images/index02.png'></image>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{pageFlag == 1}}">
+    <view class='result_more_box position_r'>
+      <image class="btn_bg_img" src='../../static/images/btn_bg.png'></image>
+      <view class='index_box'>
+        <view class='index_box_w'>
+          <navigator target="miniProgram" app-id="{{jump_url}}" path="{{jump_path}}" version="release" hover-class="none">
+            <image class="more_img" src='../../static/images/more.png'></image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{pageFlag == 0 || pageFlag == 2}}">
+    <view class='result_share_box box box-lr'>
+      <view>
+        <button class='share' open-type='share'>
+          <image class='friends_img' src='../../static/images/friends.png'></image>
+        </button>
+      </view>
+      <block wx:if="{{authFlag}}">
+        <view class='circle_box box box-align-center'>
+          <button class='openSetting' open-type='openSetting' bindopensetting="toOpen">
+            <image class="save_img" src='../../static/images/save.png'></image>
+          </button>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='circle_box box box-align-center' bindtap='savePhoto'>
+          <image class="save_img" src='../../static/images/save.png'></image>
+        </view>
+      </block>
+    </view>
+  </block>
+
+  <cover-view class='logo_box' style='top: {{isIpx ? "39" : "41"}}%' bindtap='toProgram'>
+    <cover-image class='logo_img' src='{{imgUrl}}{{jump_img}}'></cover-image>
+  </cover-view>
+</view>
+
+<view class='loading-box' wx:if="{{isLoading}}">
+  <view class='loading box box-tb box-pack-center box-center-center'>
+    <image mode='widthFix' style='width: 117rpx;' src='../../static/images/loading.gif'></image>
+  </view>
+</view>

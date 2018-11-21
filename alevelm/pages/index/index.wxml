@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class='index_wrap'>
+  <image class='alevelm_bg_img' src='../../static/images/alevelm_bg.png'></image>
+  <view class='alevelm_logo_box'>
+    <image class='alevelm_logo_img' src='../../static/images/alevelm_logo.png'></image>
+
+    <view class='msg01_box'>
+      <image class='msg01_img' src='../../static/images/msg01.png'></image>
+    </view>
+  </view>
+
+  <view class='alevelm_face_box'>
+    <image class='alevelm_face_img' src='../../static/images/alevelm_face.png'></image>
+    <view class='alevelm_radius_box'>
+      <image class='alevelm_radius_img' src='../../static/images/alevelm_radius.png'></image>
+    </view>
+  </view>
+
+  <view class='alevelm_msg_box'>
+    <view>上传个人自拍照</view>
+    <view>能清晰看到脸的那种哦~</view>
+  </view>
+
+  <block wx:if="{{userLogin}}">
+    <view class='btn_bg_box'>
+      <view bindtap='upImages' style='width: 500rpx;margin: 0 auto'>
+        <image class="btn_bg_img" src='../../static/images/btn_bg.png'></image>
+
+        <view class='img_box'>
+          <image class='img_logo_img' src='../../static/images/img_logo.png'></image>
+          <image class='img_upImg_img' src='../../static/images/upImg.png'></image>
+        </view>
+      </view>
+
+    </view>
+  </block>
+  <block wx:else>
+    <!-- <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindtap='closeUserInfo' bindgetuserinfo="getUserInfo"> -->
+    <view class='btn_bg_box'>
+      <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindtap='closeUserInfo' bindgetuserinfo="getUserInfo">
+        <image class="btn_bg_img" src='../../static/images/btn_bg.png'></image>
+
+        <view class='img_box'>
+          <image class='img_logo_img' src='../../static/images/img_logo.png'></image>
+          <image class='img_upImg_img' src='../../static/images/upImg.png'></image>
+        </view>
+      </button>
+    </view>
+    <!-- </button> -->
+  </block>
+</view>
+
+<view class='loading-box' wx:if="{{isLoading}}">
+  <view class='loading box box-tb box-pack-center box-center-center'>
+    <image mode='widthFix' style='width: 117rpx;' src='../../static/images/loading.gif'></image>
+  </view>
+</view>

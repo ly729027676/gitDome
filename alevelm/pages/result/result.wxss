@@ -1,0 +1,169 @@
+/* pages/result.wxss */
+
+.result_wrap {
+  width: 100%;
+  height: 100%;
+  background: #fff1f8;
+}
+
+.title_box {
+  width: 100%;
+  text-align: center;
+  padding-top: 38rpx;
+  color: #a0466c;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.result_yuan_box {
+  width: 100%;
+  text-align: center;
+  padding-top: 20rpx;
+}
+
+.result_yuan_img {
+  width: 593rpx;
+  height: 594rpx;
+}
+
+.result_grade_box {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+}
+
+.result_grade_img {
+  width: 180rpx;
+  height: 182rpx;
+}
+
+.grade {
+  position: absolute;
+  color: #930abb;
+  font-size: 55rpx;
+  font-weight: 800;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+.result_face_box {
+  position: absolute;
+  top: 29rpx;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.img_path {
+  width: 580rpx;
+  height: 578rpx;
+  border-radius: 60%;
+}
+
+.result_msg_box {
+  position: absolute;
+  bottom: 1%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.result_msg01_img {
+  width: 344rpx;
+  height: 129rpx;
+}
+
+.result_msg02_img {
+  width: 465rpx;
+  height: 113rpx;
+}
+
+.result_msg03_img {
+  width: 387rpx;
+  height: 114rpx;
+}
+
+.result_features {
+  padding: 20rpx 0;
+  color: #808080;
+}
+
+.result_degree_box {
+  width: 100%;
+  text-align: center;
+  color: #e73c9e;
+  font-size: 50rpx;
+  font-weight: bold;
+  margin: 20rpx;
+}
+
+.result_index_box, .result_more_box {
+  width: 100%;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.index_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.index_box_w {
+  width: 500rpx;
+  height: 70rpx;
+  line-height: 85rpx;
+  margin: 0 auto;
+}
+
+.index_img {
+  width: 196rpx;
+  height: 42rpx;
+}
+
+.index02_img {
+  width: 250rpx;
+  height: 45rpx;
+}
+
+.more_img {
+  width: 294rpx;
+  height: 45rpx;
+}
+
+.result_share_box {
+  margin: 0 30rpx;
+}
+
+.circle_img, .friends_img {
+  width: 300rpx;
+  height: 70rpx;
+  margin-top: 40rpx;
+}
+
+.circle_box {
+  margin-left: 91rpx;
+}
+
+.share {
+  background: transparent;
+  padding: 0;
+}
+
+button::after {
+  border: none;
+}
+
+.logo_img {
+  width: 130rpx;
+  height: 131rpx;
+}
+
+.logo_box {
+  position: fixed;
+  left: 0;
+  top: 39%;
+}

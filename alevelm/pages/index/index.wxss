@@ -1,0 +1,121 @@
+/**index.wxss**/
+.index_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.alevelm_bg_img {
+  width: 100%;
+  height: 100%;
+}
+
+.alevelm_logo_box {
+  position: absolute;
+  top: 7%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.alevelm_logo_img {
+  width: 344rpx;
+  height: 90rpx;
+} 
+
+.msg01_box {
+  margin-top: 40rpx;
+}
+
+.msg01_img {
+  width: 374rpx;
+  height: 30rpx;
+}
+
+.alevelm_face_box {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.alevelm_face_img {
+  width: 500rpx;
+  height: 500rpx;
+}
+
+.alevelm_radius_box {
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.alevelm_radius_img {
+  width: 266rpx;
+  height: 266rpx;
+}
+
+.alevelm_msg_box {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.alevelm_msg_box view {
+  color: #808080;
+  font-size: 30rpx;
+}
+
+.img_box {
+  position: absolute;
+  top: 16%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.img_logo_img {
+  width: 47rpx;
+  height: 47rpx;
+}
+
+.img_upImg_img {
+  width: 189rpx;
+  height: 43rpx;
+  margin-left: 20rpx;
+}
+
+.btn_bg_box {
+  position: absolute;
+  top: 85%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

@@ -1,0 +1,78 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wxe2dc46355e5fcc1b",
+	"projectname": "alevenllm01",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 3,
+			"list": [
+				{
+					"id": -1,
+					"name": "result",
+					"pathName": "pages/result/result",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "公众号调试",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "share",
+					"pathName": "pages/share/share",
+					"query": "",
+					"scene": "1011"
+				},
+				{
+					"id": 3,
+					"name": "result",
+					"pathName": "pages/result/result",
+					"query": "scene=img_index:612,pageFlag:1,uid:22",
+					"scene": "1001"
+				},
+				{
+					"id": 4,
+					"name": "facecheck",
+					"pathName": "pages/facecheck/facecheck",
+					"query": "sceen=",
+					"scene": "1001"
+				}
+			]
+		}
+	}
+}

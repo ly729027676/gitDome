@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/share/share",
+    "pages/logs/logs",
+    "pages/result/result",
+    "pages/facecheck/facecheck"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "颜值测试大挑战",
+    "navigationBarTextStyle": "black"
+  }
+}

@@ -1,0 +1,38 @@
+<!--pages/share/share.wxml-->
+<view class='share_wrap'>
+  <image class='share_bg_img blur' src='../../static/images/share_bg.jpg'></image>
+</view>
+
+<view class='modle-bg' wx:if="{{flag == 1}}">
+  <image class='model_bg_img' src='../../static/images/model_bg.png'></image>
+</view>
+<view class='as_share' wx:if="{{flag == 1}}">
+  <view class='share01_box'>
+    <image class='share_01_img' src='../../static/images/share_01.png'></image>
+  </view>
+  <view class='share02_box'>
+    <image class='share_02_img' src='../../static/images/share_02.png'></image>
+  </view>
+
+  <view class='share_btn_box'>
+    <view class='btn_box_w'>
+      <button open-type='share' bindtap='toResult' style='background: transparent;padding: 0'>
+        <!-- <block wx:if='{{switchFlag == 1}}'>
+          <image class='btn_bg_img' src='../../static/images/btn_bg.png'></image>
+          <view class='btn_box'>
+            <image class='share_friend_img' src='../../static/images/share_friend.png'></image>
+          </view>
+        </block>
+        <block wx:elif="{{switchFlag == 2}}">
+         
+        </block> -->
+         <image class='btn_bg_img' src='../../static/images/btn_bg.png'></image>
+          <view class='btn_box'>
+            <image class='share_btn_img' src='../../static/images/share_btn.png'></image>
+          </view>
+      </button>
+    </view>
+  </view>
+
+  <!-- <button open-type='share' bindtap='toResult'>分享给朋友</button> -->
+</view>

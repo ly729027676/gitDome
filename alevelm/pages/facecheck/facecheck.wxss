@@ -1,0 +1,146 @@
+/* pages/facecheck.wxss */
+
+.facecheck_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+/* .poster {
+  width: 100%;
+  height: 910rpx;
+} */
+
+.friend_msg {
+  width: 100%;
+  height: 75rpx;
+  line-height: 75rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #a1446c;
+  margin-top: 3%;
+}
+
+.big_box {
+  width: 100%;
+  margin-top: 10rpx;
+}
+
+.big_img_box {
+  width: 527rpx;
+  margin: 0 auto;
+}
+
+.photo_box {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.photo_img {
+  width: 200rpx;
+  height: 52rpx;
+}
+
+.friend_msg {
+  width: 100%;
+  height: 75rpx;
+  line-height: 75rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #a1446c;
+  margin-top: 3%;
+}
+
+.save_img {
+  width: 300rpx;
+  height: 70rpx;
+}
+
+.openSetting {
+  background: transparent;
+  padding: 0;
+  height: 70rpx;
+  line-height: 85rpx;
+  border-radius: 0;
+  border: none;
+}
+
+.index_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.index_box_w {
+  width: 527rpx;
+  height: 70rpx;
+  line-height: 88rpx;
+  margin: 0 auto;
+}
+
+button::after{
+border: none;
+}
+
+.big_wrap {
+  margin-top: 30rpx;
+}
+
+.index_img {
+  width: 196rpx;
+  height: 42rpx;
+}
+
+.circle_img, .friends_img {
+  width: 300rpx;
+  height: 70rpx;
+  margin-top: 40rpx;
+}
+
+.circle_box {
+  margin-left: 91rpx;
+}
+
+.share {
+  background: transparent;
+  padding: 0;
+}
+
+button::after {
+  border: none;
+}
+
+.logo_img {
+  width: 112rpx;
+  height: 136rpx;
+}
+
+.logo_box {
+  position: fixed;
+  left: 0;
+  top: 39%;
+}
+
+.result_index_box, .result_more_box {
+  width: 100%;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.more_img {
+  width: 294rpx;
+  height: 45rpx;
+}
+
+.index02_img {
+  width: 250rpx;
+  height: 45rpx;
+}

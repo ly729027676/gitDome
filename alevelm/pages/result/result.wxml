@@ -1,0 +1,123 @@
+<!--pages/result.wxml-->
+<view class='result_wrap'>
+  <view class='title_box'>
+    {{dataList.word_ret}}
+  </view>
+  <view class='result_yuan_box position_r'>
+    <image class='result_yuan_img' src='../../static/images/result_yuan.png'></image>
+
+    <view class='result_face_box'>
+      <image mode='aspectFill' class='img_path' src='{{imgUrl}}{{dataList.img_path}}'></image>
+    </view>
+
+    <view class='result_grade_box'>
+      <image class='result_grade_img' src='../../static/images/result_grade.png'></image>
+      <view class='grade' style='left: {{left}}%;top: {{top}}%'>
+        {{dataList.beauty}}
+      </view>
+    </view>
+
+    <view class='result_msg_box'>
+      <block wx:if="{{dataList.cheke_ret == 1}}">
+        <image class='result_msg01_img' src='../../static/images/result_01.png'></image>
+      </block>
+      <block wx:elif="{{dataList.cheke_ret == 2}}">
+        <image class='result_msg02_img' src='../../static/images/result_02.png'></image>
+      </block>
+      <block wx:elif="{{dataList.cheke_ret == 3}}">
+        <image class='result_msg03_img' src='../../static/images/result_03.png'></image>
+      </block>
+    </view>
+  </view>
+
+  <view class='box box-lr result_features'>
+    <view class='flex1 box-center-center'>颜值：
+      <text style='color:#a0466c;font-size: 50rpx'>{{dataList.beauty}}</text>
+    </view>
+    <view class='flex1 box-center-center'>年龄：
+      <text style='color: #a0466c'>{{dataList.age}}</text>
+    </view>
+    <view class='flex1 box-center-center'>脸型：
+      <text style='color: #a0466c'>{{dataList.face_type}}</text>
+    </view>
+  </view>
+
+  <block wx:if="{{dataList.succee == 1}}">
+    <view class='result_degree_box'>
+      {{dataList.face_kill}}
+    </view>
+  </block>
+
+  <block wx:if="{{pageFlag == 0 || pageFlag == 2}}">
+    <view class='result_index_box position_r'>
+      <image class="btn_bg_img" src='../../static/images/btn_bg.png'></image>
+      <view class='index_box'>
+        <view class='index_box_w' bindtap='toIndex'>
+          <image class="index_img" src='../../static/images/index.png'></image>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='result_index_box position_r'>
+      <image class="btn_bg_img" src='../../static/images/btn_bg.png'></image>
+      <view class='index_box'>
+        <view class='index_box_w' bindtap='toIndex'>
+          <image class="index02_img" src='../../static/images/index02.png'></image>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{dataList.succee == 0 && pageFlag == 1}}">
+    <view class='result_more_box position_r'>
+      <image class="btn_bg_img" src='../../static/images/btn_bg.png'></image>
+      <view class='index_box'>
+        <view class='index_box_w'>
+          <navigator target="miniProgram" app-id="{{jump_url}}" version="release" hover-class="none">
+            <image class="more_img" src='../../static/images/more.png'></image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:elif="{{dataList.succee == 1 && pageFlag == 1}}">
+    <view class='result_more_box position_r'>
+      <image class="btn_bg_img" src='../../static/images/btn_bg.png'></image>
+      <view class='index_box'>
+        <view class='index_box_w'>
+          <navigator target="miniProgram" app-id="{{jump_url}}" path="{{jump_path}}" version="release" hover-class="none">
+            <image class="more_img" src='../../static/images/more.png'></image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{pageFlag == 0 || pageFlag == 2}}">
+    <block wx:if="{{share_ret}}">
+      <view class='result_share_box box box-lr'>
+        <view>
+          <button class='share' open-type='share'>
+            <image class='friends_img' src='../../static/images/friends.png'></image>
+          </button>
+        </view>
+        <view class='circle_box' bindtap='toFacecheck'>
+          <image class='circle_img' src='../../static/images/circle.png'></image>
+        </view>
+      </view>
+    </block>
+
+    <view class='logo_box' style='top: {{isIpx ? "39" : "47"}}%'>
+      <navigator target="miniProgram" app-id="{{jump_url}}" path="{{jump_path}}" version="release" hover-class="none">
+        <image class='logo_img' src='{{imgUrl}}{{jump_img}}'></image>
+      </navigator>
+    </view>
+  </block>
+</view>
+
+<!-- <view class='loading-box' wx:if="{{isLoading}}">
+  <view class='loading box box-tb box-pack-center box-center-center'>
+    <image mode='widthFix' style='width: 117rpx;' src='../../static/images/loading.gif'></image>
+  </view>
+</view> -->
