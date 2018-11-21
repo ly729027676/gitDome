@@ -1,0 +1,66 @@
+<!--pages/invite_friends/invite_friends.wxml-->
+<import src="../../template/draw/draw.wxml" />
+
+<view class='friends_wrap position_r'>
+  <template is="tem_draw" />
+  <!-- <view class='draw_header draw_partrait box box-lr'>
+    <view class='draw_user_box'>
+      <image class='draw_user_portrait' src='{{imgUrl}}{{small_portrait}}'></image>
+    </view>
+    <view class='theTitle'>
+      我是你的灵魂好友吗？
+    </view>
+  </view>
+
+  <view class='share_box'>
+    <canvas class="poster" style='width: 100%;height: {{screenH}}px;' canvas-id="poster"></canvas>
+  </view> -->
+  <view class='share_box'>
+    <canvas class="poster" style='width: 100%;height: {{screenH}}px;' canvas-id="poster"></canvas>
+  </view>
+
+  <view class='friend_footer'>
+    <view class='box box-tb box-pack-center'>
+      <button class='share' open-type='share' style='line-height: normal'>
+        <view class='flex1 friend_msg box-center-center'>
+          邀请好友答题
+        </view>
+      </button>
+      <block wx:if="{{authFlag}}">
+        <button class='openSetting' open-type='openSetting' bindopensetting="toOpen" style='line-height: normal'>
+          <view class='flex1 friend_phone box-center-center'>
+            <text class='friend_phone01' style='color: #fde176;'>保存相册</text>
+          </view>
+        </button>
+      </block>
+      <block wx:else>
+        <view class='flex1 friend_phone box-center-center' bindtap='savePhoto'>
+          <text class='friend_phone01' >保存相册</text>
+        </view>
+      </block>
+      <view class='flex1 friend_index' bindtap='toIndex'>返回首页</view>
+    </view>
+  </view>
+</view>
+
+
+<cover-view class='modle-bg' bindtap='close' wx:if="{{flag == 1}}"></cover-view>
+<cover-view class='modle_rule_box' wx:if="{{flag == 1}}">
+  <cover-view class='rule_content'>
+    <cover-view class='title'>
+      出题成功
+    </cover-view>
+    <cover-view class='title_cont'>
+      分享群或朋友圈邀请好友答题，就能测出你和好友间的灵魂匹配度啦~
+    </cover-view>
+    <cover-view class='footer box box-rl'>
+      <cover-view bindtap='close'>我知道了</cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>
+
+<view class='loading-box' wx:if="{{isLoading}}">
+  <view class='loading box box-tb box-pack-center box-center-center'>
+    <image mode='widthFix' src='../../static/images/loading.gif'></image>
+  </view>
+</view>

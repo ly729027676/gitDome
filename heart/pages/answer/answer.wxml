@@ -1,0 +1,132 @@
+<!--pages/answer/answer.wxml-->
+<import src="../../template/draw/draw.wxml" />
+<view class='answer_wrap position_r'>
+  <template is="tem_draw" data="{{back}}" />
+  <view class='answer_box position_r'>
+    <image class='answer_bg_img' src='../../static/images/answer_bg.png'></image>
+
+    <!-- 用户名 -->
+    <view class='answer_name'>
+      你和{{dataList.question_wx_name}}的灵魂匹配度
+    </view>
+
+    <!-- 匹配度 -->
+    <view class='answer_rate_box'>
+      <view class='rate_box position_r'>
+        <view class='rate_tage'>{{dataList.ret_similar}}</view>
+        <view class='rate_bg'>
+          <view class='rate_radius' style='height: {{dataList.ret_similar}}'></view>
+        </view>
+      </view>
+    </view>
+
+    <view class='answer_btn_box'>
+      <view class='box box-lr box-pack-between'>
+        <view class='flex1'>
+          <text class='font' bindtap='toIndex'>我也要出题</text>
+        </view>
+        <view class='flex1'>
+          <text class='font' bindtap='goDraw'>偷看ta的答案</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='answer_managa'>
+      <view class='item_box'>
+        <view class='item_title box box-lr box-pack-start'>
+          <view class='flex1 item_time box-center-left'>{{dataList.answer_time}}</view>
+        </view>
+        <view class='item_content box box-lr box-pack-between'>
+          <view class='flex4 box-center-left'>
+            <view class='box box-lr' style='width: 100%'>
+              <view class='flex1'>
+                <image class='user_portrait' src='{{imgUrl}}{{dataList.answer_small_portrait}}'></image>
+              </view>
+              <view class='flex2 box box-tb box-align-between box-pack-between'>
+                <view class='user_name_answer'>{{dataList.answer_wx_name}}
+                </view>
+                <view class='user_msg'>{{dataList.answer_ret}}</view>
+              </view>
+            </view>
+          </view>
+          <view class='flex1 box box-pack-end box-align-center user_percen'>{{dataList.ret_similar}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='answer_draw_box'>
+    <view class='draw_box_w position_r' bindtap='toIndex'>
+      <image class='draw_04_img' src='../../static/images/draw_04.png'></image>
+      <view class='draw_btn'>
+        我也要出题
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 关注公众号 -->
+<!-- <view class='modle-bg' bindtap='close' wx:if="{{flag == 1}}"></view>
+<view class='modle_focus_box' wx:if="{{flag == 1}}">
+  <view class='focus_box position_r'>
+    <!-- 关闭按钮 
+    <view class='close_btn'>
+      <image bindtap='close' class='close_img' src='../../static/images/close.png'></image>
+    </view>
+    <view class='focus_title'>
+      要关注公众号才能偷看ta的答案呦~
+    </view>
+    <view class='focus_user_box'>
+      <view class='box box-tb'>
+        <view class='flex1 user_avatar'>aa</view>
+        <view class='flex1 user_name'>最新小游戏</view>
+      </view>
+    </view>
+    <view class='focus_user_msg'>
+      <view>最豪华的游戏礼包、福利奖品免费领！</view>
+      <view>提供最全最好玩的热门小游戏及游戏攻</view>
+      <view>略，无需下载，既点既玩~</view>
+    </view>
+    <view class='focus_footer'>
+      <official-account></official-account>
+    </view>
+  </view>
+</view> -->
+
+<view class='modle-bg' bindtap='close' wx:if="{{flag == 1}}"></view>
+<view class='modle_draw_box' wx:if="{{flag == 1}}">
+  <view class='draw_boxs position_r'>
+    <!-- 关闭按钮 -->
+    <view class='close_btn'>
+      <image bindtap='close' class='close_img' src='../../static/images/close02.png'></image>
+    </view>
+    <view class='box box-tb box-pack-center box-align-center draw_user'>
+      <view class='flex1'>
+        <image class='user_avatar' src='{{imgUrl}}{{dataList.answer_small_portrait}}'></image>
+      </view>
+      <view class='flex1 user_nike'>{{dataList.answer_wx_name}}</view>
+    </view>
+
+    <view class='draw_item'>
+      <scroll-view scroll-y="true" style="height: 740rpx;">
+        <block wx:for="{{dataList.user_questions}}" wx:key="this">
+          <view class='item_list box box-tb box-pack-around'>
+            <view class='flex1 box box-align-center'>
+              Q{{index + 1}}: {{item.question_name}}
+            </view>
+            <block wx:if="{{dataArry[index]}}">
+              <view class='flex1 box box-align-center' style='color:#ff6d7a'>
+                答案：{{item.answer}}
+              </view>
+            </block>
+            <block wx:else>
+              <view class='flex1 box box-align-center'>
+                答案：{{item.answer}}
+              </view>
+            </block>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

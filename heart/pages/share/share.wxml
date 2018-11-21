@@ -1,0 +1,76 @@
+<!--pages/share/share.wxml-->
+<import src="../../template/draw/draw.wxml" />
+<import src="../../template/draw/questions.wxml" />
+<import src="../../template/record/record.wxml" />
+<view class='share_wrap position_r'>
+  <template is="tem_draw" data="{{back}}" />
+  <!-- 分享链接 答题者点击 -->
+  <view class='draw_box'>
+    <block wx:if="{{userFlag == 0}}">
+      <template is="tem_questions" data="{{dataList,imgUrl,small_portrait,chatFlagA,chatFlagB, _number, userLogin}}" />
+    </block>
+    <block wx:elif="{{userFlag == 1}}">
+      <template is="tem_record" data="{{tabFlag, dataList,imgUrl,arrLen}}" />
+    </block>
+
+    <view class='share_btn_box'>
+      <view class='share_btn' bindtap='toBack'>
+        我也要出题
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 关注公众号 -->
+<!-- 关注公众号 -->
+<view class='modle-bg' catchtouchmove="myCatchTouch" bindtap='close' wx:if="{{flag == 1}}"></view>
+<view class='close_btn'  wx:if="{{flag == 1}}"><image bindtap='close' class='close02_img' src='../../static/images/close02.png'></image></view>
+<view class='modle_focus_box' catchtouchmove="myCatchTouch" wx:if="{{flag == 1}}">
+  <view class='focus_box'>
+    <image class='follow_bg_img' src='../../static/images/follow_bg.png'></image>
+  </view>
+</view>
+
+<view class='modle-bg' bindtap='close' wx:if="{{flag == 2}}"></view>
+<view class='modle_draw_box' wx:if="{{flag == 2}}">
+  <view class='draw_boxs position_r'>
+    <!-- 关闭按钮 -->
+    <view class='close_btn'>
+      <image bindtap='close' class='close_img' src='../../static/images/close02.png'></image>
+    </view>
+    <view class='box box-tb box-pack-center box-align-center draw_user'>
+      <view class='flex1'>
+        <image class='user_avatar' src='{{imgUrl}}{{portrait}}'></image>
+      </view>
+      <view class='flex1 user_nike'>{{u_name}}</view>
+    </view>
+
+    <view class='draw_item'>
+      <scroll-view scroll-y="true" style="height: 740rpx;">
+        <block wx:for="{{dataArry}}" wx:key="this">
+          <view class='item_list box box-tb box-pack-around'>
+            <view class='flex1 box box-align-center'>
+              Q1: {{item.question_name}}
+            </view>
+            <block wx:if="{{qindex[index]}}">
+              <view class='flex1 box box-align-center' style='color:#ff6d7a'>
+                答案：{{item.answer}}
+              </view>
+            </block>
+            <block wx:else>
+              <view class='flex1 box box-align-center'>
+                答案：{{item.answer}}
+              </view>
+            </block>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>
+
+<view class='loading-box' wx:if="{{isLoading}}">
+  <view class='loading box box-tb box-pack-center box-center-center'>
+    <image mode='widthFix' src='../../static/images/loading.gif'></image>
+  </view>
+</view>

@@ -1,0 +1,142 @@
+/* pages/share/share.wxss */
+@import "../../template/record/record.wxss";
+.share_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.share_btn_box {
+  position: absolute;
+  top: 88%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #0251A0;
+  text-decoration: underline;
+}
+
+.share_btn {
+  width: 200rpx;
+  margin: 0 auto;
+}
+
+.back_img {
+  width: 42rpx;
+  height: 38rpx;
+}
+
+/*公众号*/
+.modle_focus_box {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.focus_box {
+  width: 692rpx;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.follow_bg_img {
+  width: 692rpx;
+  height: 75%;
+}
+
+.close02_img {
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.close_btns {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  text-align: center;
+}
+
+.close_btn {
+  position: absolute;
+  top: 2%;
+  left: -4%;
+  width: 100%;
+  z-index: 1000;
+  text-align: right;
+}
+
+
+.modle_draw_box {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.draw_boxs {
+  width: 691rpx;
+  height: 992rpx;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  background: #ff6d7a;
+  border-radius: 22rpx;
+}
+
+.user_nike {
+  font-size: 30rpx;
+  color: #000000;
+}
+
+.draw_user {
+  padding-top: 50rpx;
+}
+
+.draw_item {
+  margin-top: 10rpx;
+}
+
+.item_list {
+  width: 641rpx;
+  height: 152rpx;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  border-radius: 22rpx;
+  background: #ffffff;
+  margin-bottom: 24rpx;
+  padding: 20rpx 0;
+}
+
+.item_list view{
+  padding: 0 20rpx;
+}
+
+.finger_box {
+  position: absolute;
+  top: 7%;
+  right: 10%;
+  z-index: 1001;
+}
+
+.finger_img {
+  width: 88rpx;
+  height: 104rpx;
+}
+
+.user_avatar {
+  width: 108rpx;
+  height: 108rpx;
+  margin: 0 auto;
+  border-radius: 60%;
+}
+
+.close_img {
+  width: 34rpx;
+  height: 34rpx;
+}

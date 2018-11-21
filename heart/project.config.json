@@ -1,0 +1,89 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.0",
+	"appid": "wx23a57e83cd238a89",
+	"projectname": "heart",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "draw",
+					"pathName": "pages/draw/draw",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "invite_friends",
+					"pathName": "pages/invite_friends/invite_friends",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "record",
+					"pathName": "pages/record/record",
+					"query": "attention=1",
+					"scene": "1001"
+				},
+				{
+					"id": 4,
+					"name": "share",
+					"pathName": "pages/share/share",
+					"query": "scene=uid:1,qid:1",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "answer",
+					"pathName": "pages/answer/answer",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "see_topic",
+					"pathName": "pages/see_topic/see_topic",
+					"query": ""
+				}
+			]
+		}
+	}
+}

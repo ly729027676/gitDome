@@ -1,0 +1,134 @@
+<!--index.wxml-->
+<view class="index_wrap position_r">
+  <image class='index_bg_img' src='../../static/images/index_bg.png'></image>
+
+  <!-- 标题 -->
+  <view class='index_title'>
+    灵魂好友大考验
+  </view>
+  <!-- 默契大考验 -->
+  <view class='index_01_box'>
+    <image class='index_01_img' src='../../static/images/index_01.png'></image>
+  </view>
+  <!-- 怎么玩 -->
+  <view class='index_rule' bindtap='goRule'>
+    怎么玩
+  </view>
+
+  <block wx:if="{{userLogin}}">
+    <!-- 授权背景 -->
+    <view class='index_yes_authorize'>
+      <view class='user_box position_r'>
+        <view class='user_por'>
+          <view class='box box-lr box-align-center box-pack-center' style='height: 156rpx;'>
+            <image class='user_portrait' src='{{userInfo.avatarUrl}}'></image>
+          </view>
+        </view>
+      </view>
+
+      <!-- <image class='user_portrait' src='{{userInfo.avatarUrl}}'></image> -->
+      <view class='user_name'>
+        {{userInfo.nickName}}
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <!-- 未授权背景图 -->
+    <view class='index_no_authorize'>
+      <image class='index_04_img' src='../../static/images/index_04.png'></image>
+    </view>
+  </block>
+
+
+
+  <!-- 开始出题按钮 -->
+  <view class='index_02_box'>
+    <block wx:if="{{userLogin}}">
+      <view class='index_02_evet' bindtap='toDraw'>
+        <image class='index_02_img' src='../../static/images/index_02.png'></image>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='index_02_evet'>
+        <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+          <image class='index_02_img' src='../../static/images/index_02.png'></image>
+        </button>
+      </view>
+    </block>
+  </view>
+
+  <!-- 更多好玩 -->
+  <view class='index_03_box'>
+    <view class='index_03_img_box'>
+      <navigator target="miniProgram" app-id="{{jump_go_url}}" path="{{jump_path}}" version="release" hover-class="none">
+        <image class='index_03_img' src='../../static/images/index_03.png'></image>
+      </navigator>
+    </view>
+
+  </view>
+
+  <view class='btn_wrap'>
+    <view class='btn_box box box-lr box-pack-between'>
+      <view class='box-center-left'>
+        <block wx:if="{{userLogin}}">
+          <text bindtap='toRecord'>我的记录</text>
+        </block>
+        <block wx:else>
+          <button class='user_button btn_box_s' style='color: #0251a0' hover-class="none" plain="true" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            我的记录
+          </button>
+        </block>
+
+      </view>
+      <view class='flex1 box-center-right'>
+        <text bindtap='toService'>联系客服</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 规则模态 -->
+<view class='modle-bg' bindtap='close' wx:if="{{flag == 1}}"></view>
+<view class='modle_rule_box' wx:if="{{flag == 1}}">
+  <view class='rule_content'>
+    <view class='title'>
+      玩法介绍
+    </view>
+    <view class='title_cont'>
+      选择10题作答，答完后分享给好友作答，看看你和好友选择的相近程度，测试你和好友间的灵魂匹配度。
+    </view>
+    <view class='footer box box-rl'>
+      <view bindtap='close'>我知道了</view>
+    </view>
+  </view>
+</view>
+
+<!-- 联系客服模态 -->
+<view class='modle-bg' bindtap='close' wx:if="{{flag == 2}}"></view>
+<view class='modle_service_box' wx:if="{{flag == 2}}">
+  <view class='service_box'>
+    <view class='service_title'>
+      联系客服
+    </view>
+    <view class='service_content'>
+      现在咨询量较大，回复不及时，请大家加客服MM的微信反馈问题
+    </view>
+    <view class='service_footer'>
+      <block wx:for="{{dataList}}" wx:key="this">
+        <view class='box box-lr box-pack-around service_bot'>
+          <view class='flex2'>{{item.online_type}}：{{item.online_num}}</view>
+          <view class='flex1 box box-pack-end'>
+            <view class='copy {{copyFlag == index + 1 ? "copy_red" : ""}}' data-index="{{index + 1}}" data-num="{{item.online_num}}" bindtap='goCopy'>
+              <block wx:if="{{copyFlag == index + 1}}">
+                {{copy_msg01}}
+              </block>
+              <block wx:else>
+                {{copy_msg}}
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

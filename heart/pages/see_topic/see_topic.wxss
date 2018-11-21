@@ -1,0 +1,73 @@
+/* pages/see_topic/see_topic.wxss */
+.topic_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.topic_box {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.qa_topic {
+  width: 95%;
+  height: 74.5%;
+  margin: 0 auto;
+  border: 1px solid #4b4b4b;
+  background: #ff6b7a;
+  border-radius: 22rpx;
+  padding: 29rpx 0;
+  overflow: hidden;
+}
+
+.item_list {
+  width: 641rpx;
+  height: 172rpx;
+  padding: 10rpx 0;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  border-radius: 22rpx;
+  background: #ffffff;
+  margin-bottom: 24rpx;
+}
+
+.item_list view{
+  padding: 0 39rpx;
+}
+
+.answer_draw_box {
+  position: absolute;
+  top: 92%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.draw_box_w {
+  width: 284rpx;
+  margin: 0 auto;
+}
+
+.draw_04_img {
+  width: 284rpx;
+  height: 87rpx;
+}
+
+.draw_btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 87rpx;
+  line-height: 87rpx;
+  text-align: center;
+}
+
+.share {
+  background: transparent;
+  padding: 0;
+}

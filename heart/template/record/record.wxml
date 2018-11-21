@@ -1,0 +1,79 @@
+<template name="tem_record">
+  <!-- 切换tab列表 -->
+  <view class='tab_box'>
+    <view class='record_box box box-lr box-pack-center'>
+      <view class='q_record {{tabFlag == 0 ? "[q_record_color, q_right]" : ""}}' bindtap='goTabSet' data-index='0'>我的出题记录</view>
+      <view class='a_record {{tabFlag == 1 ? "[q_record_color, a_left]" : ""}}' bindtap='goTabSet' data-index="1">我的答题记录</view>
+    </view>
+  </view>
+  <!-- 列表数据 -->
+  <view class='tab_item_box'>
+    <view class='item_box'>
+      <swiper class="tab-content" current="{{tabFlag}}" duration="300" bindchange="switchTab" style="height: 64%">
+        <block wx:for="{{dataList}}" wx:key="this">
+          <swiper-item>
+            <scroll-view scroll-y='true' class='scoll-h' bindscrolltolower="tolower">
+              <block wx:for="{{dataList[index]}}" wx:for-index="idr" wx:key="this">
+                <view class='item'>
+                  <view class='item_title box box-lr box-pack-between'>
+                    <view class='flex1 item_time'>{{item.answer_time}}</view>
+                    <block wx:if="{{tabFlag == 0}}">
+                      <view class='flex1 box-center-right item_set' bindtap='toSeeTopic' data-index="{{item.question_index}}">
+                        查看此题
+                      </view>
+                    </block>
+                    <block wx:else>
+                      <view class='flex1 box-center-right item_set' bindtap='toAnswer' data-list="{{item.answer}}" data-portrait="{{item.small_portrait}}" data-name="{{item.wx_name}}" data-index="{{item.similar_index_list}}">
+                        偷看ta的答案
+                      </view>
+                    </block>
+                  </view>
+                  <block wx:if="{{item.wx_name}}">
+                    <view class='item_content box box-lr box-pack-between'>
+                      <view class='flex3'>
+                        <view class='box box-lr'>
+                          <view class='flex1'>
+                            <image class='user_portrait' src='{{imgUrl}}{{item.small_portrait}}'></image>
+                          </view>
+                          <view class='flex2 box box-tb' style='margin-left: -20rpx;'>
+                            <view class='flex1 user_name'>{{item.wx_name}}
+                              <block wx:if="{{tabFlag == 0}}">
+                                <text class='user_color' bindtap='toAnswer' data-list="{{item.answer}}" data-portrait="{{item.small_portrait}}" data-name="{{item.wx_name}}" data-index="{{item.similar_index_list}}">偷看ta的答案</text>
+                              </block>
+                            </view>
+                            <view class='flex1 user_msg'>{{item.answer_ret}}</view>
+                          </view>
+                        </view>
+                      </view>
+                      <view class='flex1 box box-pack-end box-align-center user_percen'>{{item.ret_similar}}</view>
+                    </view>
+                  </block>
+                  <block wx:else>
+                    <view class='item_content box box-lr box-pack-center'>
+                      {{item.answer_ret}}
+                    </view>
+                  </block>
+                </view>
+              </block>
+            </scroll-view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <!-- 没有记录 -->
+  <block wx:for="{{arrLen}}" wx:key="this">
+    <block wx:if="{{arrLen[index] == tabFlag || arrLen[index] == tabFlag}}">
+      <view class='tab_item_box'>
+        <view class='no_record_box position_r'>
+          <image class='record_bg_img' src='../../static/images/record_bg.png'></image>
+          <view class='record_msg'>
+            还没有记录哟~
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+  
+</template>

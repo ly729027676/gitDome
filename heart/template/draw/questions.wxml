@@ -1,0 +1,75 @@
+<template name="tem_questions">
+  <view class='draw_header draw_partrait box box-lr'>
+    <view class='draw_user_box'>
+      <image class='draw_user_portrait' src='{{imgUrl}}{{small_portrait}}'></image>
+    </view>
+    <view class='theTitle box box-lr box-align-center position_r'>
+      <text>{{dataList.question_name}}</text>
+      <view class='title_border'></view>
+    </view>
+  </view>
+
+  <block wx:if="{{userLogin}}">
+    <view class='draw_01_box'>
+      <view class='draw_01_w position_r'>
+        <form bindsubmit="goResult" report-submit="true">
+          <button class='user_button' plain="true" formType="submit" data-id="{{dataList.question_id}}" data-result="A">
+            <image class='draw_01_img' src='../../static/images/draw_01.png'></image>
+            <view class='draw_answer_01 {{chatFlagA ? "" : "resultA"}}'>
+              {{dataList.resultA}}
+            </view>
+          </button>
+        </form>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='draw_01_box'>
+      <view class='draw_01_w position_r'>
+        <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+          <image class='draw_01_img' src='../../static/images/draw_01.png'></image>
+          <view class='draw_answer_01 {{chatFlagA ? "" : "resultA"}}'>
+            {{dataList.resultA}}
+          </view>
+        </button>
+      </view>
+    </view>
+  </block>
+
+  <block wx:if="{{userLogin}}">
+    <view class='draw_02_box'>
+      <view class='draw_01_w position_r'>
+        <form bindsubmit="goResult" report-submit="true">
+          <button class='user_button' plain="true" formType="submit" data-id="{{dataList.question_id}}" data-result="B">
+            <image class='draw_02_img' src='../../static/images/draw_02.png'></image>
+            <view class='draw_answer_02 {{chatFlagB ? "" : "resultB"}}'>
+              {{dataList.resultB}}
+            </view>
+          </button>
+        </form>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='draw_02_box'>
+      <view class='draw_01_w position_r'>
+        <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+          <image class='draw_02_img' src='../../static/images/draw_02.png'></image>
+          <view class='draw_answer_02 {{chatFlagB ? "" : "resultB"}}'>
+            {{dataList.resultB}}
+          </view>
+        </button>
+      </view>
+    </view>
+  </block>
+
+  <!-- or制作 -->
+  <view class='add_box'>
+    <view class='add_radius'>or</view>
+  </view>
+
+  <!-- 题目数量 -->
+  <view class='draw_number_box'>
+    {{_number}} / 10
+  </view>
+</template>

@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/draw/draw",
+    "pages/invite_friends/invite_friends",
+    "pages/share/share",
+    "pages/answer/answer",
+    "pages/see_topic/see_topic",
+    "pages/record/record"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "灵魂好友大考验",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false,
+    "navigationStyle": "custom"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx320af730716253c0",
+    "wxe2dc46355e5fcc1b",
+    "wx09de797f34671741",
+    "wx23a57e83cd238a89",
+    "wx0918972b09620b40",
+    "wxada331c8497e16e6",
+    "wx92e63109b3f096de"
+  ]
+}

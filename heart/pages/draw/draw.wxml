@@ -1,0 +1,27 @@
+<!--pages/draw.wxml-->
+<import src="../../template/draw/draw.wxml" />
+<import src="../../template/draw/questions.wxml" />
+
+<view class='draw_wrap position_r'>
+  <template is="tem_draw" />
+
+  <view class='draw_box'>
+    <template is="tem_questions" data="{{dataList,imgUrl,small_portrait,chatFlagA,chatFlagB, _number, userLogin, resultFlag}}" />
+
+    <!-- 换一个按钮 -->
+    <view class='draw_next_box'>
+      <view class='next_btn_box position_r' bindtap='goNext'>
+        <image class='draw_03_img' src='../../static/images/draw_03.png'></image>
+        <view class='next_box'>
+          换一个
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<view class='loading-box' wx:if="{{isLoading}}">
+  <view class='loading box box-tb box-pack-center box-center-center'>
+    <image mode='widthFix' src='../../static/images/loading.gif'></image>
+  </view>
+</view>

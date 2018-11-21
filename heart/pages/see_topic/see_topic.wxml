@@ -1,0 +1,39 @@
+<!--pages/see_topic/see_topic.wxml-->
+<import src="../../template/draw/draw.wxml" />
+<view class='topic_wrap position_r'>
+  <template is="tem_draw" />
+
+  <view class='topic_box'>
+    <view class='qa_topic'>
+      <scroll-view scroll-y="true" style="height: 100%;">
+        <block wx:for="{{dataList}}" wx:key="this">
+          <view class='item_list box box-tb box-pack-around'>
+            <view class='flex1 box box-align-center'>
+              Q{{index + 1}}: {{item.question_name}}
+            </view>
+            <view class='flex1 box box-align-center'>
+              答案：{{item.answer}}
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class='answer_draw_box'>
+    <view class='draw_box_w position_r' bindtap='toIndex'>
+      <button class='share' open-type='share'>
+        <image class='draw_04_img' src='../../static/images/draw_04.png'></image>
+        <view class='draw_btn'>
+          我要再发一次
+        </view>
+      </button>
+    </view>
+  </view>
+</view>
+
+<view class='loading-box' wx:if="{{isLoading}}">
+  <view class='loading box box-tb box-pack-center box-center-center'>
+    <image mode='widthFix' src='../../static/images/loading.gif'></image>
+  </view>
+</view>

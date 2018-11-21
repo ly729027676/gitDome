@@ -1,0 +1,129 @@
+/* pages/invite_friends/invite_friends.wxss */
+
+.friends_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.theTitle {
+  margin-top: 12rpx;
+}
+
+.share_box {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+
+.friend_footer {
+  position: absolute;
+  top: 78%;
+  left: 0;
+  width: 100%;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+}
+
+.draw_03_w {
+  width: 284rpx;
+  margin: 0 auto;
+}
+
+.draw_04_img, .draw_03_img {
+  width: 284rpx;
+  height: 87rpx;
+}
+
+.friend_msg {
+  width: 394rpx;
+  height: 78rpx;
+  margin: 0 auto;
+  line-height: 78rpx;
+  color: #333333;
+  background: #fde176;
+  border-radius: 40rpx;
+  margin-bottom: 33rpx;
+  font-size: 38rpx;
+}
+
+.friend_phone {
+  width: 394rpx;
+  height: 78rpx;
+  margin: 0 auto;
+  line-height: 78rpx;
+  color: #fde176;
+  background: #333333;
+  border-radius: 40rpx;
+  font-size: 38rpx;
+  margin-bottom: 30rpx;
+  
+}
+
+.friend_phone01 {
+  color: #fde176;
+  font-size: 38rpx;
+}
+
+.friend_index {
+  width: 120rpx;
+  margin: 0 auto;
+  color: #2c4bbb;
+  font-size: 30rpx;
+  text-decoration: underline;
+}
+
+.share {
+  background: transparent;
+  padding: 0;
+}
+
+button::after {
+  border: none;
+}
+
+.modle_rule_box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -217.5rpx;
+  width: 100%;
+  z-index: 1001;
+}
+
+.rule_content {
+  width: 72%;
+  height: 435rpx;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 54rpx 59rpx;
+}
+
+.title {
+  font-size: 42rpx;
+}
+
+.title_cont {
+  padding-top: 46rpx;
+  color: #838383;
+  font-size: 33rpx;
+  line-height: 66rpx;
+  white-space: normal;
+}
+
+.footer {
+  width: 100%;
+  text-align: right;
+  color: #0cb700;
+  font-size: 34rpx;
+  padding-top: 90rpx;
+}
+
+.openSetting {
+  background: transparent;
+}
