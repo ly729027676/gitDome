@@ -1,0 +1,16 @@
+<template name="tem_loding">
+  <view class='loading-box' wx:if="{{isLoading}}">
+    <view class='box box-pack-center box-align-center' style='height: 100%'>
+      <block wx:if="{{showSubPackages}}">
+        <view>
+          <image class='loding_img' src='../../../static/images/loding.gif'></image>
+        </view>
+      </block>
+      <block wx:else>
+        <view>
+          <image class='loding_img' src='../../static/images/loding.gif'></image>
+        </view>
+      </block>
+    </view>
+  </view>
+</template>

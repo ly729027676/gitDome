@@ -1,0 +1,335 @@
+.start_song_wrap {
+  width: 100%;
+  height: 100%;
+  background: #3edbac;
+}
+
+.song01_box {
+  width: 100%;
+  text-align: center;
+  padding-top: 30rpx;
+}
+
+.song01_bg_img {
+  width: 196rpx;
+  height: 60rpx;
+}
+
+.song_num_box {
+  position: absolute;
+  top: 34rpx;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 38rpx;
+  color: #fff;
+}
+
+.song_robate_box {
+  width: 100%;
+  text-align: center;
+  padding-top: 27rpx;
+}
+
+.song02_bg_img {
+  width: 424rpx;
+  height: 439rpx;
+}
+
+.song03__box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: ;
+}
+
+.song04_box {
+  position: absolute;
+  top: 32%;
+  left: 0;
+  width: 100%;
+  height: 140rpx;
+}
+
+.song03_bg_img {
+  width: 424rpx;
+  height: 424rpx;
+}
+
+.song04_bg_img {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.time_box {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  font-size: 50rpx;
+  color: #ff5640;
+}
+
+.song03_ani {
+  width: 424rpx;
+  height: 424rpx;
+  margin: 0 auto;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-animation: song03_ani 2s linear infinite;
+  animation: song03_ani 2s linear infinite;
+}
+
+@keyframes song03_ani {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes song03_ani {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.stop_ani {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+.btn_box {
+  padding: 0 110rpx;
+  margin-top: 24rpx;
+  margin-bottom: 48rpx;
+}
+
+.song01_btn_img, .song02_btn_img {
+  width: 206rpx;
+  height: 75rpx;
+}
+
+.song03_btn_img {
+  width: 520rpx;
+  height: 76rpx;
+  vertical-align: bottom;
+}
+
+.song_answer_box {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 53rpx;
+}
+
+.song_answer_name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76rpx;
+  line-height: 76rpx;
+  color: #fff;
+}
+
+.song03_box {
+  width: 520rpx;
+  margin: 0 auto;
+}
+
+.share {
+  background: transparent;
+  padding: 0;
+}
+
+button::after {
+  border: 0;
+}
+
+.timeout_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1001;
+}
+
+.no_happy_img {
+  width: 162rpx;
+  height: 164rpx;
+}
+
+.timeout_wrap {
+  width: 624rpx;
+  height: 613rpx;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12rpx;
+}
+
+.no_happy_box {
+  position: absolute;
+  top: 13%;
+  left: 0;
+  width: 100%;
+}
+
+.timeout_title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 38rpx;
+  color: #000;
+  padding-top: 50rpx;
+}
+
+.timeout_bg_img {
+  width: 624rpx;
+  height: 613rpx;
+}
+
+.timeout_btn_box {
+  position: absolute;
+  left: 0;
+  top: 57%;
+  width: 100%;
+  text-align: center;
+}
+
+.timeout_share, .timeout_more {
+  width: 318rpx;
+  height: 69rpx;
+  line-height: 69rpx;
+  margin: 0 auto;
+  background: #ff5640;
+  color: #fff;
+  border-radius: 12rpx;
+  font-size: 31rpx;
+}
+
+.timeout_more {
+  margin-top: 32rpx;
+}
+
+.timeout_resurrec {
+  width: 100%;
+  text-align: center;
+  font-size: 31rpx;
+  color: #ef6b5a;
+  margin-top: 25rpx;
+  text-decoration: underline;
+}
+
+.timeout_coles_box {
+  margin-top: 100rpx;
+}
+
+.modle_ready {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  text-align: center;
+}
+
+.ready_box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: -103rpx;
+}
+
+.ready_img {
+  width: 588rpx;
+  height: 227rpx;
+}
+
+.go_img {
+  width: 344rpx;
+  height: 206rpx;
+}
+
+.timeout01_bg_img,.timeout02_bg_img {
+  width: 624rpx;
+  height: 613rpx;
+}
+
+.timeout01_btn_box, .timeout02_btn_box {
+  position: absolute;
+  left: 0;
+  top: 70%;
+  width: 100%;
+  text-align: center;
+}
+
+.happy_img {
+  width: 162rpx;
+  height: 179rpx;
+}
+
+.timeout02_btn_box {
+  top: 64%;
+}
+
+.timeout_img_box {
+  position: absolute;
+  top: 19%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.img_item {
+  width: 439rpx;
+  height: 248rpx;
+  border: 1px solid red;
+}
+
+.timeout_tpic, .timeout04_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65rpx;
+}
+
+.timeout03_bg_img {
+  width: 493rpx;
+  height: 65rpx;
+}
+
+.timeout04_bg_img {
+  width: 388rpx;
+  height: 39rpx;
+  padding-top: 10rpx;
+}
+
+.event_box {
+  position: absolute;
+  top: 42%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.timeout05_bg_img {
+  width: 226rpx;
+  height: 98rpx;
+  margin: 0 auto;
+}

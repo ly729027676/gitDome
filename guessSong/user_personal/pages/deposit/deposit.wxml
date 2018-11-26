@@ -1,0 +1,91 @@
+<view class='deposit_wrap'>
+  <!-- 提现记录 -->
+  <view class='box box-lr box-pack-end'>
+    <view class='recode_box' bindtap='toRecode'>提现记录</view>
+  </view>
+
+  <view class='deposit_box'>
+    <view class='box box-lr box-pack-center deposit_balance'>
+      我的余额
+    </view>
+    <view class='box box-lr box-pack-center deposit_money'>
+      ￥{{money}}
+    </view>
+
+    <!-- 提现输入框 -->
+    <view class='user_box'>
+      <view class='user_input_box position_r'>
+        <input class='user_input' type='text' maxlength='10' placeholder='￥请输入提现金额' bindinput='getInput'></input>
+        <view class='deposit_btn'>
+          全部提现
+        </view>
+      </view>
+    </view>
+
+    <!-- 提示 -->
+    <view class='box box-lr box-pack-center prompt_box'>
+      提示：金额满1元即可提现哦~
+    </view>
+
+    <!-- 提现按钮 -->
+    <view class='box box-lr box-pack-center btn01_box'>
+      <view class='position_r'>
+        <image class='btn01_bg_img' src='../static/images/btn01_bg.png'></image>
+        <view class='btn_msg_box' bindtap='goDeposit'>
+          提现
+        </view>
+      </view>
+    </view>
+
+    <!-- 继续游戏 -->
+    <view class='box box-lr box-pack-center btn02_box'>
+      <view class='position_r'>
+        <image class='btn01_bg_img' src='../static/images/btn02_bg.png'></image>
+        <view class='btn_msg_box'>
+          继续游戏
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 扫搜公众号游戏 -->
+  <view class='btn03_box'>
+    <view class='border_box box box-lr box-align-center box-pack-center'>
+      <view class='solid_box'></view>
+      <view class='solid_title'>提现说明</view>
+      <view class='solid_box'></view>
+    </view>
+    <view class='instructions_box'>
+      <view>1.余额满0.3元可提现</view>
+      <view>2.后续每笔手动提现金额至少1元</view>
+      <view>3.微信官方为保证资金安全要求，提现至微信需实名认证</view>
+      <view>4.提现申请成功，24小时内到账微信零钱包</view>
+      <view>5.如有疑问，请联系客服。</view>
+    </view>
+  </view>
+
+</view>
+
+<!-- 提现弹框 -->
+<view class='modle_bg' wx:if="{{flag == 1}}"></view>
+<view class='deposit_modle_box' wx:if="{{flag == 1}}">
+  <view class='box box-tb box-pack-center box-align-center position_r' style='height: 100%'>
+    <view class='deposit_m_box'>
+      <view class='deposit_title'>
+        提现提示
+      </view>
+      <view class='deposit_content'>
+        为了您的资金安全，本次提现需要关注“最新游戏精选”公众号
+      </view>
+      <view class='deposit_footer_box box box-pack-center'>
+        <button class='deposit_footer' open-type='contact'>点击回复：1</button>
+      </view>
+    </view>
+    <view class='deposit_close'>
+      <icon bindtap='close_model' type="cancel" size="40" color="white" />
+    </view>
+  </view>
+
+
+
+</view>

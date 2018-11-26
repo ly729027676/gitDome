@@ -1,0 +1,29 @@
+<view class='recode_wrap'>
+  <view class='box boxlr box-pack-between recode_box'>
+    <view class='flex3 box box-tb'>
+      <view class='flex1 recode_order'>
+        被打击：201811052159544825362
+      </view>
+      <view class='flex1 recode_titme'>
+        2018-11-05  21:59:54
+      </view>
+    </view>
+    <view class='flex1 box box-pack-center box-align-center recode_money'>
+      0.2
+    </view>
+  </view>
+
+  <view class='box boxlr box-pack-between recode_box'>
+    <view class='flex3 box box-tb'>
+      <view class='flex1 recode_order'>
+        被打击：201811052159544825362
+      </view>
+      <view class='flex1 recode_titme'>
+        2018-11-05  21:59:54
+      </view>
+    </view>
+    <view class='flex1 box box-pack-center box-align-center recode_money'>
+      0.2
+    </view>
+  </view>
+</view>

@@ -1,0 +1,186 @@
+<view class='start_song_wrap'>
+  <!-- 题目数量 -->
+  <view class='song01_box position_r'>
+    <image class='song01_bg_img' src='../../static/images/song01_bg.png'></image>
+    <view class='song_num_box'>
+      第1/5题
+    </view>
+  </view>
+
+  <!-- 音乐背景旋转 -->
+  <view class='song_robate_box'>
+    <view class='position_r'>
+      <image class='song02_bg_img' src='../../static/images/song02_bg.png'></image>
+      <view class='song03__box'>
+        <view class='song03_ani {{stop_ani ? "stop_ani" : ""}}'>
+          <image class='song03_bg_img' src='../../static/images/song03_bg.png'></image>
+        </view>
+      </view>
+      <view class='song04_box'>
+        <image class='song04_bg_img' src='../../static/images/song04_bg.png'></image>
+        <view class='time_box'>
+          {{countdown}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='position_r' style='top: {{laoutTop}}%'>
+    <!-- 求组好友，跳过此题 -->
+    <view class='btn_box'>
+      <view class='box box-lr box-pack-bewteen'>
+        <view class='flex1'>
+          <button class='share' open-type='share'>
+            <image class='song01_btn_img' src='../../static/images/song01_btn.png'></image>
+          </button>
+        </view>
+        <view class='flex1 box-center-right'>
+          <image class='song02_btn_img' bindtap='goSkip' src='../../static/images/song02_btn.png'></image>
+        </view>
+      </view>
+    </view>
+
+    <!-- 题目答案 -->
+    <view class='song_answer_box'>
+      <view class='position_r song03_box'>
+        <image class='song03_btn_img' src='../../static/images/song03_btn.png'></image>
+        <view class='song_answer_name'>
+          <text>我们的歌</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='song_answer_box'>
+      <view class='position_r song03_box'>
+        <image class='song03_btn_img' src='../../static/images/song03_btn.png'></image>
+        <view class='song_answer_name'>
+          <text>秋天不回来</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='song_answer_box'>
+      <view class='position_r song03_box'>
+        <image class='song03_btn_img' src='../../static/images/song03_btn.png'></image>
+        <view class='song_answer_name'>
+          <text>夜空</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- ready go -->
+  <view class='modle_ready' wx:if="{{ready}}">
+    <view class='ready_box'>
+      <image class='ready_img' src='../../static/images/ready.png'></image>
+    </view>
+  </view>
+
+  <view class='modle_ready' wx:if="{{go}}">
+    <view class='ready_box'>
+      <image class='go_img' src='../../static/images/go.png'></image>
+    </view>
+  </view>
+
+  <!-- 回答超时弹出框 -->
+  <view class='modle_bg modle_bg_color' catchtap='close_model' wx:if="{{flag == 1}}"></view>
+  <view class='timeout_box' wx:if="{{flag == 1}}">
+    <view class='box box-tb box-pack-center box-align-center' style='height: 100%'>
+      <view class='no_happy_box' style='top: {{no_happy}}%'>
+        <image class='no_happy_img' src='../../static/images/no_happy.png'></image>
+      </view>
+      <view class='timeout_wrap'>
+        <view class='position_r'>
+          <image class='timeout_bg_img' src='../../static/images/timeout_bg.png'></image>
+          <view class='timeout_title'>
+            回答超时
+          </view>
+          <view class='timeout_btn_box'>
+            <view>
+              <button class='share timeout_share' open-type='share'>邀请群好友一起玩</button>
+            </view>
+            <view class='timeout_more'>
+              获取更多能量
+            </view>
+            <view class='timeout_resurrec'>
+              试玩游戏，即可复活
+            </view>
+          </view>
+        </view>
+        <view class='timeout_coles_box'>
+          <icon bindtap='closeModle' type="cancel" size="40" color="white" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 回答正确弹出框 -->
+  <view class='modle_bg modle_bg_color' catchtap='close_model' wx:if="{{flag == 2}}"></view>
+  <view class='timeout_box' wx:if="{{flag == 2}}">
+    <view class='box box-tb box-pack-center box-align-center' style='height: 100%'>
+      <view class='no_happy_box' style='top: {{no_happy}}%'>
+        <image class='happy_img' src='../../static/images/happy.png'></image>
+      </view>
+      <view class='timeout_wrap'>
+        <view class='position_r'>
+          <image class='timeout01_bg_img' src='../../static/images/timeout01_bg.png'></image>
+          <view class='timeout_title'>
+            回答正确
+          </view>
+          <view class='timeout01_btn_box'>
+            <view>
+              歌名：你是我的眼
+            </view>
+            <view class='timeout_more' bindtap='goNext'>
+              下一题
+            </view>
+          </view>
+        </view>
+        <!-- <view class='timeout_coles_box'>
+        <icon bindtap='closeModle' type="cancel" size="40" color="white" />
+      </view> -->
+      </view>
+    </view>
+  </view>
+
+  <!-- 回答错误弹出框 -->
+  <view class='modle_bg modle_bg_color' catchtap='close_model' wx:if="{{flag == 3}}"></view>
+  <view class='timeout_box' wx:if="{{flag == 3}}">
+    <view class='no_happy_box'>
+      <image class='no_happy_img' src='../../static/images/no_happy.png'></image>
+    </view>
+    <view class='timeout_wrap'>
+      <view class='position_r'>
+        <image class='timeout02_bg_img' src='../../static/images/timeout02_bg.png'></image>
+        <view class='timeout_title'>
+          离红包只差一点
+        </view>
+        <view class='timeout_img_box'>
+          <image class='img_item' src=''></image>
+          <view class='timeout_tpic'>
+            <image class='timeout03_bg_img' src='../../static/images/timeout03_bg.png'></image>
+            <view class='timeout04_box'>
+              <image class='timeout04_bg_img' src='../../static/images/timeout04_bg.png'></image>
+            </view>
+          </view>
+        </view>
+        <!-- 点击按钮 -->
+        <view class='event_box'>
+          <image class='timeout05_bg_img' src='../../static/images/timeout05_bg.png'></image>
+        </view>
+        <view class='timeout02_btn_box'>
+          <view>
+            <button class='share timeout_share' open-type='share'>邀请群好友一起玩</button>
+          </view>
+          <view class='timeout_more'>
+            获取更多能量
+          </view>
+        </view>
+      </view>
+      <view class='timeout_coles_box'>
+        <icon bindtap='toIndex' type="cancel" size="40" color="white" />
+      </view>
+    </view>
+  </view>
+</view>

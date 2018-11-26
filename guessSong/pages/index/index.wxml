@@ -1,0 +1,277 @@
+<import src="../../template/loding/loding.wxml" />
+
+<!--index.wxml-->
+<view class="index_wrap base_wrap">
+  <image class='index_bg_img' src='../../static/images/index_bg.png'></image>
+
+  <!-- 规则 -->
+  <view class='rule_box' bindtap='goModel' data-index="1">
+    <view class='rule_box_w'>
+      规则
+    </view>
+  </view>
+
+  <view class='index_content_box'>
+    <!-- 标题 -->
+    <view class='title_box'>
+      <image class='index_title_img' src='../../static/images/index_title.png'></image>
+    </view>
+
+    <!-- 标题描述 -->
+    <view class='title_msg_box' style='margin-top: {{title_top}}rpx'>
+      答对5题送红宝，满1元可提现
+    </view>
+
+    <!-- 猜歌按钮 -->
+    <view class='start_box'>
+      <block wx:if="{{hasUserInfo}}">
+        <image class='start_img' bindtap='toSong' src='../../static/images/start.png'></image>
+      </block>
+      <block wx:else>
+        <view class='start_box_w'>
+          <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            <image class='start_img' src='../../static/images/start.png'></image>
+          </button>
+        </view>
+      </block>
+    </view>
+
+    <!-- 能量 -->
+    <view class='index03_box position_r'>
+      <image class='index03_bg_img' bindtap='toEnergy' src='../../static/images/index03_bg.png'></image>
+      <block wx:if="{{energy_num >= 0}}">
+        <view class='num_box'>
+          <view class='num'>{{energy_num}}</view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 抢钱，趟钱 -->
+    <view class='money_box'>
+      <view class='box box-lr'>
+        <view class='flex1'>
+          <block wx:if="{{hasUserInfo}}">
+            <view class='robMoney_box position_r'>
+              <image class='robMoney_img' bindtap='toRob' src='../../static/images/robMoney.png'></image>
+              <view class='rob_red_box'>
+                {{rob_money}}
+              </view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class='lyingMoney_box_w'>
+              <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+                <image class='robMoney_img' src='../../static/images/robMoney.png'></image>
+              </button>
+            </view>
+          </block>
+        </view>
+        <view class='flex1'>
+          <block wx:if="{{hasUserInfo}}">
+            <view class='robMoney_box position_r'>
+              <image class='lyingMoney_img' bindtap='toLying' src='../../static/images/lyingMoney.png'></image>
+              <view class='rob_red_box'>
+                {{lie_money}}
+              </view>
+            </view>
+          </block>
+          <block wx:else>
+            <view class='lyingMoney_box_w'>
+              <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+                <image class='lyingMoney_img' src='../../static/images/lyingMoney.png'></image>
+              </button>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 排行榜,我的账户 -->
+  <view class='index04_box'>
+    <image class='index04_bg_img' src='../../static/images/index04_bg.png'></image>
+    <view class='rank_box'>
+      <view class='box box-tb box-align-between' style='height: 100%;'>
+        <view class='flex1' bindtap='goRank'>
+          <image class='rank_img' src='../../static/images/rank.png'></image>
+        </view>
+        <view class='flex1'>
+          <block wx:if="{{hasUserInfo}}">
+            <image class='account_img' bindtap='toUser' src='../../static/images/account.png'></image>
+          </block>
+          <block wx:else>
+            <button class='user_button' hover-class="none" plain="true" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+              <image class='account_img' src='../../static/images/account.png'></image>
+            </button>
+          </block>
+
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部背景 -->
+  <view class='index02_box'>
+    <image class='index02_img' src='../../static/images/index02_bg.png'></image>
+  </view>
+
+  <block wx:if="{{hasUserInfo}}">
+    <button>已授权</button>
+  </block>
+  <block wx:else>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权</button>
+  </block>
+</view>
+
+<!-- 规则弹框 -->
+<view class='modle_bg' catchtap='close_model' wx:if="{{flag == 1}}"></view>
+<view class='modle_rule_box' wx:if="{{flag == 1}}">
+  <view class='box box-lr box-pack-center box-align-center' style='height:100%;'>
+    <view class='rule_box_bg'>
+      <view class='modle_rule_title'>
+        详细规则
+      </view>
+      <view class='modle_rule_content'>
+        <view class='rule_item'>1、每天有3次免费答题的机会，超过3次将会 消耗能量数，如果能量数不足，用户可以通过 做任务获取到相对应的能量数；
+        </view>
+        <view class='rule_item'>2、点击广告可获得1次挑战机会，邀请1个新 用户可以获得1次挑战机会；
+        </view>
+        <view class='rule_item'>3、每轮挑战随机5关，连续答对可获得随机现 金红包
+        </view>
+        <view class='rule_item'>4、红包达1.00元（最多通关5次）即可提现， 祝君中红包大奖
+        </view>
+      </view>
+      <view class='modle_rule_footer'>
+        <icon bindtap='close_model' type="cancel" size="40" color="white" />
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<!-- 排行榜弹框 -->
+<view class='modle_bg' catchtap='close_model' wx:if="{{flag == 2}}"></view>
+<view class='modle_rank_box' wx:if="{{flag == 2}}">
+  <view class='rank_box'>
+    <view class='box box-align-center box-pack-center' style='height: 100%;'>
+      <view class='rank_content position_r'>
+        <image class='rank01_bg_img' src='../../static/images/rank01_bg.png'></image>
+        <view class='rank_nav_box'>
+          <view class='rank_nav'>
+            <view class='box box-lr'>
+              <view class='flex1'>
+                <image class='rank02_img' bindtap='goRankNav' data-index="1" src='../../static/images/rank02.png'></image>
+              </view>
+              <view class='flex1'>
+                <image class='rank02_img' bindtap='goRankNav' data-index="2" src='../../static/images/rank04.png'></image>
+              </view>
+              <view class='flex1'>
+                <image class='rank02_img' bindtap='goRankNav' data-index="3" src='../../static/images/rank03.png'></image>
+              </view>
+
+            </view>
+          </view>
+        </view>
+
+        <view class='rank_item_box'>
+          <scroll-view scroll-y="true" style="height: 734rpx;">
+            <block wx:for="{{dataList}}" wx:key="this">
+              <view class='item position_r'>
+                <block wx:if="{{index == 0}}">
+                  <image class='rank02_bg_img' src="../../static/images/rank02_bg.png"></image>
+                </block>
+                <block wx:elif="{{index == 1}}">
+                  <image class='rank02_bg_img' src="../../static/images/rank03_bg.png"></image>
+                </block>
+                <block wx:elif="{{index == 2}}">
+                  <image class='rank02_bg_img' src="../../static/images/rank04_bg.png"></image>
+                </block>
+                <block wx:else>
+                  <image class='rank02_bg_img' src="../../static/images/rank05_bg.png"></image>
+                </block>
+                <view class='item_manage_box'>
+                  <view class='box box-lr'>
+                    <view class='flex1'>
+                      <block wx:if="{{index > 2}}">
+                        {{index + 1}}
+                      </block>
+                    </view>
+                    <view class='flex2 box box-pack-start box-align-center'>
+                      <block wx:if="{{item.portrait}}">
+                        <image class='item_privat' src='{{imgUrl}}{{item.portrait}}'></image>
+                      </block>
+                      <text class='item_name1'>{{item.new_user_name}}</text>
+                    </view>
+                    <view class='flex1 box-center-right'>
+                      <text class='item_money1'>{{item.all_money}}</text>
+                      <text class='item_unit1'>元</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </scroll-view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 能量不足,没有机会啦 -->
+<view class='modle_bg modle_bg_color' catchtap='close_model' wx:if="{{flag == 3}}"></view>
+<view class='timeout_box' wx:if="{{flag == 3}}">
+  <view class='no_happy_box'>
+    <image class='no_happy_img' src='../../static/images/no_happy.png'></image>
+  </view>
+  <view class='timeout_wrap'>
+    <view class='position_r'>
+      <image class='index05_bg_img' src='../../static/images/index05_bg.png'></image>
+
+      <view class='timeout02_btn_box'>
+        <view class='timeout_more'>
+          明天在来完
+        </view>
+        <view class='timeout_more'>
+          获取更多能量
+        </view>
+      </view>
+    </view>
+    <view class='timeout_coles_box'>
+      <icon bindtap='close_model' type="cancel" size="40" color="white" />
+    </view>
+  </view>
+</view>
+
+<!-- 浪费机会 -->
+<view class='modle_bg modle_bg_color' catchtap='close_model' wx:if="{{flag == 4}}"></view>
+<view class='waste_box' wx:if="{{flag == 4}}">
+  <view class='box box-align-center box-pack-center' style='height:100%;'>
+    <view class='waste_content'>
+      <view class='waster_title'>提示</view>
+      <view>
+        由于你在挑战中退出，失去了一次挑战机会~
+      </view>
+      <view class='waster_footer'>
+        <text bindtap='close_model'>我知道了</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 新人红包 -->
+<view class='modle_bg' wx:if="{{flag == 5}}"></view>
+<view class='new_user_modle_box' wx:if="{{flag == 5}}">
+  <view class='new_user_box position_r'>
+    <image class='new_user_img' src='../../static/images/new_user.png'></image>
+    <view class='new_user_m'>
+      <text class='new_user_size'>0.24</text>
+      <text class='new_user_d'>元</text>
+    </view>
+    <image class='new_btn_img' bindtap='getRed' src='../../static/images/new_btn.png'></image>
+  </view>
+</view>
+
+<!-- loding加载 -->
+<template is="tem_loding" data="{{isLoading}}"></template>

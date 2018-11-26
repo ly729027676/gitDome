@@ -1,0 +1,91 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.2",
+	"appid": "wxc32b6df0d65e3d31",
+	"projectname": "guessSong",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "start_song_index",
+					"pathName": "start_song/pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "energy",
+					"pathName": "pages/energy/energy",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "start_rob_money/index",
+					"pathName": "start_rob_money/pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "deposit",
+					"pathName": "user_personal/pages/deposit/deposit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "recode",
+					"pathName": "user_personal/pages/recode/recode",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user_personal-recode",
+					"pathName": "user_personal/pages/recode/recode",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "start_song-redEnvelope",
+					"pathName": "start_song/pages/redEnvelope/redEnvelope"
+				}
+			]
+		}
+	}
+}

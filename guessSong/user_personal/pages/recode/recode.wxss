@@ -1,0 +1,21 @@
+.recode_box {
+  padding: 0 12rpx;
+  border-bottom: 1rpx solid #eeeeee;
+  margin-top: 22rpx;
+}
+
+.recode_order {
+  font-size: 26rpx;
+  color: #000000;
+}
+
+.recode_titme {
+  margin: 25rpx 0;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.recode_money {
+  font-size: 28rpx;
+  color: #ff4444;
+}

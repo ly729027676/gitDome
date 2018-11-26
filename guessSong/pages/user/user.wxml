@@ -1,0 +1,110 @@
+<!--pages/user/user.wxml-->
+<import src="../../template/loding/loding.wxml" />
+
+<view class='user_wrap'>
+  <image class='user_bg_img' src='../../static/images/user_bg.png'></image>
+
+  <!-- 用户信息 -->
+  <view class='user_panner_box'>
+    <view class='panner_Box position_r'>
+      <view class='user_portrait'>
+        <view class='portrait_box'>
+          <image class='portrait_img' src='{{imgUrl}}{{dataList.portrait}}'></image>
+        </view>
+      </view>
+
+      <!-- 用户姓名和ID -->
+      <view class='user_name_box'>
+        <view class='user_name'>
+          {{dataList.user_name}}
+        </view>
+        <view class='user_id'>
+          ID: {{dataList.user_id}}
+        </view>
+      </view>
+
+      <!-- 用户账户余额。。。资料 -->
+      <view class='user_means_box'>
+        <view class='box box-lr box-pack-between'>
+          <view class='flex1 box box-tb'>
+            <view class='means_item'>
+              <text>{{dataList.energy_num}}</text>个
+            </view>
+            <view class='means_item means_size'>
+              能量
+            </view>
+          </view>
+          <view class='flex1 box box-tb'>
+            <view class='means_item'>
+              <text>{{dataList.my_money}}</text>元
+            </view>
+            <view class='means_item means_size'>
+              账户余额
+            </view>
+          </view>
+          <view class='flex1 box box-tb'>
+            <view class='means_item'>
+              <text>{{dataList.win_count}}</text>次
+            </view>
+            <view class='means_item means_size'>
+              通关次数
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 用户提现,获得能量按钮 -->
+      <view class='user_btn_box'>
+        <view class='box box-lr box-pack-between'>
+          <view class='flex1'>
+            <image class='wx_img' bindtap='toEnergy' src='../../static/images/wx.png'></image>
+          </view>
+          <view class='flex1'>
+            <image class='reflect_img' bindtap='toWithdrawal' src='../../static/images/reflect.png'></image>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <!-- 公众号 -->
+  <view class='official_item_box'>
+    <view class='item_box position_r'>
+      <image class='user02_bg_img' src='../../static/images/user02_bg.png'></image>
+      <view class='official_box'>
+        <view class='item position_r'>
+          <image class='user_item_bg_img' src='../../static/images/user_item_bg.png'></image>
+          <view class='official_msg_box'>
+            <view class='box box-lr  box-pack-start official_msg'>
+              <view class='flex1'>
+                <view class='official_icon'>
+                  <image class='user01_icon_img' src='../../static/images/user01_icon.png'></image>
+                </view>
+              </view>
+              <view class='flex2 box box-tb box-pack-center official_nick'>
+                <view class='flex1 box box-align-center game_name'>关注公众号</view>
+                <view class='flex1 box box-align-center game_msg'>可得1次通关机会</view>
+              </view>
+              <view class='flex1 box box-align-center'>
+                <view><image class='user_go_img' src='../../static/images/user_go.png'></image></view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='item position_r'>
+          <image class='user_item_bg_img' src='../../static/images/user_item_bg.png'></image>
+        </view>
+        <view class='item position_r'>
+          <image class='user_item_bg_img' src='../../static/images/user_item_bg.png'></image>
+        </view>
+        <view class='item position_r'>
+          <image class='user_item_bg_img' src='../../static/images/user_item_bg.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- loding加载 -->
+<template is="tem_loding" data="{{isLoading}}"></template>

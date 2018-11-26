@@ -1,0 +1,178 @@
+/* pages/user/user.wxss */
+
+.user_wrap {
+  width: 100%;
+  height: 1560rpx;
+}
+
+.user_bg_img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.user_panner_box {
+  position: absolute;
+  top: 13%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.panner_Box {
+  width: 660rpx;
+  height: 466rpx;
+  margin: 0 auto;
+  background: #ff8466;
+  border-radius: 22rpx;
+}
+
+.user_portrait {
+  position: absolute;
+  top: -16%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.portrait_box {
+  width: 168rpx;
+  height: 168rpx;
+  margin: 0 auto;
+  border-radius: 60%;
+  background: #fff;
+}
+
+.portrait_img {
+  width: 168rpx;
+  height: 168rpx;
+  border-radius: 60%;
+  -webkit-transform: scale(0.9, 0.9);
+  transform: scale(0.9, 0.9);
+}
+
+.user_name_box {
+  position: absolute;
+  top: 22%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.user_name {
+  font-size: 41rpx;
+  color: #fff;
+}
+
+.user_id {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.user_means_box {
+  position: absolute;
+  top: 47%;
+  left: 0;
+  width: 100%;
+}
+
+.means_item {
+  color: #fff;
+}
+
+.means_item text {
+  font-size: 56rpx;
+}
+
+.means_size {
+  font-size: 22rpx;
+}
+
+.user_btn_box {
+  position: absolute;
+  top: 79%;
+  left: 0;
+  width: 100%;
+}
+
+.wx_img, .reflect_img {
+  width: 271rpx;
+  height: 71rpx;
+}
+
+.official_item_box {
+  position: absolute;
+  top: 700rpx;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.item_box {
+  width: 651rpx;
+  margin: 0 auto;
+}
+
+.user02_bg_img {
+  width: 651rpx;
+  height: 754rpx;
+}
+
+.official_box {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.user_item_bg_img {
+  width: 536rpx;
+  height: 114rpx;
+}
+
+.item {
+  padding-bottom: 18rpx;
+}
+
+.official_msg_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.official_msg {
+  width: 536rpx;
+  margin: 0 auto;
+}
+
+.official_icon {
+  width: 108rpx;
+  height: 108rpx;
+}
+
+.official_nick {
+  text-align: left;
+  padding-left: -10rpx;
+}
+
+.game_name {
+  font-size: 26rpx;
+  color: #5a95b7;
+}
+
+.game_msg {
+  font-size: 26rpx;
+  color: #949596;
+}
+
+.user_go_img {
+  width: 113rpx;
+  height: 52rpx;
+}
+
+.user01_icon_img {
+  width: 106rpx;
+  height: 106rpx;
+}

@@ -1,0 +1,54 @@
+.index_nav_box {
+  padding: 0 15rpx;
+  box-sizing: border-box;
+  padding-top: 39rpx; 
+}
+
+.rob_nav_num_box {
+  position: absolute;
+  bottom: 16%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 32rpx;
+}
+
+.index01_big_btn_img {
+  width: 152rpx;
+  height: 152rpx;
+}
+
+.index01_btn_img {
+  width: 106rpx;
+  height: 106rpx;
+}
+
+.nav_full {
+  font-size: 32rpx;
+  color: #2c2c2c;
+}
+
+.footer_box {
+  position: fixed;
+  bottom: 2%;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+}
+
+.rob_red_box {
+  position: absolute;
+  top: 9%;
+  right: 20%;
+}
+
+.num, .rob_red_box {
+  width: 38rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  border-radius: 60%;
+  border: 1px solid #000000;
+  background: #ef6b5a;
+  color: #ffffff;
+}

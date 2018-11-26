@@ -1,0 +1,79 @@
+.redEnvelope_wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.index_bg_img {
+  width: 100%;
+  height: 100%;
+  max-height: 1560rpx;
+}
+
+.index02_box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.redEnvelope_02_img {
+  width: 100%;
+  height: 545rpx;
+  vertical-align: bottom;
+}
+
+.redEnvelope_01_box {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.redEnvelope_01_img {
+  width: 582rpx;
+  height: 116rpx;
+}
+
+.redEnvelope_03_box {
+  position: absolute;
+  top: 17%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.redEnvelope_03_img {
+  width: 572rpx;
+  height: 762rpx;
+}
+
+.redEnvelope_money_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 25rpx;
+  color: #feeca7;
+  font-size: 28rpx;
+}
+
+.money_box {
+  font-size: 109rpx;
+}
+
+.redEnvelope_btn {
+  position: absolute;
+  top: 85%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.redEnvelope_04_img {
+  width: 486rpx;
+  height: 99rpx;
+}

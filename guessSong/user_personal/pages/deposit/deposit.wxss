@@ -1,0 +1,167 @@
+.recode_box {
+  width: 140rpx;
+  height: 47rpx;
+  line-height: 47rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #5e5e5e;
+  border: 1px solid #5e5e5e;
+  border-radius: 30rpx;
+  margin: 30rpx 16rpx 0 0;
+}
+
+.deposit_box {
+  margin-top: 30rpx;
+  padding: 0 62rpx;
+}
+
+.deposit_balance {
+  font-size: 26rpx;
+  color: #4c4c4c;
+}
+
+.deposit_money {
+  font-size: 72rpx;
+  color: #323232;
+}
+
+.user_box {
+  margin-top: 38rpx;
+}
+
+.user_input_box {
+  width: 610rpx;
+  height: 85rpx;
+}
+
+.user_input {
+  width: 610rpx;
+  height: 85rpx;
+  border: 1px solid #868686;
+  border-radius: 12rpx;
+  padding-left: 25rpx;
+}
+
+.deposit_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 85rpx;
+  line-height: 85rpx;
+  color: #3cb3ff;
+}
+
+.prompt_box {
+  font-size: 24rpx;
+  color: #4c4c4c;
+  margin-top: 33rpx;
+}
+
+.btn01_box {
+  margin-top: 77rpx;
+}
+
+.btn01_bg_img {
+  width: 506rpx;
+  height: 108rpx;
+}
+
+.btn_msg_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 108rpx;
+  line-height: 108rpx;
+  text-align: center;
+  color: #ffffff;
+  font-size: 42rpx;
+}
+
+.btn02_box {
+  margin-top: 48rpx;
+}
+
+.btn03_bg_img {
+  width: 625rpx;
+  height: 244rpx;
+}
+
+.btn03_box {
+  margin-top: 50rpx;
+}
+
+.deposit_modle_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+}
+
+.solid_title {
+  padding: 0 17rpx;
+}
+
+.solid_box {
+  width: 96rpx;
+  border-top: 1px solid #000000; 
+}
+
+.instructions_box {
+  margin-top: 28rpx;
+  padding: 0 44rpx;
+  font-size: 26rpx;
+  color: #4c4c4c;
+}
+
+.instructions_box view {
+  line-height: 50rpx;
+}
+
+.deposit_m_box {
+  width: 624rpx;
+  height: 325rpx;
+  background-color: #ffffff;
+  border-radius: 12rpx;
+  padding: 34rpx;
+}
+
+.deposit_title {
+  font-size: 34rpx;
+  color: #000000;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 35rpx;
+}
+
+.deposit_content {
+  font-size: 32rpx;
+  color: #4c4c4c;
+  line-height: 65rpx;
+  text-align: center;
+}
+
+.deposit_footer_box {
+  width: 100%;
+  margin-top: 38rpx;
+}
+
+.deposit_footer {
+  width: 391rpx;
+  height: 69rpx;
+  line-height: 69rpx;
+  border-radius: 60rpx;
+  background-color: #169bd5;
+  color: #ffffff;
+  text-align: center;
+}
+
+.deposit_close {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}

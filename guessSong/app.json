@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/energy/energy"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "欢乐猜歌狂",
+    "navigationBarTextStyle": "black"
+  },
+  "subPackages": [
+    {
+      "root": "user_personal",
+      "pages": [
+        "pages/deposit/deposit",
+        "pages/recode/recode",
+        "pages/service/service"
+      ]
+    },
+    {
+      "root": "start_song",
+      "pages": [
+        "pages/index/index",
+        "pages/redEnvelope/redEnvelope"
+      ]
+    },
+    {
+      "root": "start_rob_money",
+      "pages": [
+        "pages/index/index",
+        "pages/lying/lying",
+        "pages/notice/notice"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "start_song",
+        "start_rob_money"
+      ]
+    }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx320af730716253c0",
+    "wxe2dc46355e5fcc1b",
+    "wx09de797f34671741",
+    "wx23a57e83cd238a89",
+    "wx0918972b09620b40",
+    "wxada331c8497e16e6",
+    "wx92e63109b3f096de"
+  ],
+  "debug": true
+}

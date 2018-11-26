@@ -1,0 +1,180 @@
+@import "../../../template/rob_nav/index.wxss";
+
+.index_wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f5dc;
+  padding-bottom: 460rpx;
+}
+
+.index_bg_img {
+  width: 100%;
+  height: 100%;
+  max-height: 1560rpx;
+}
+
+.index02_box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.index02_img {
+  width: 100%;
+  height: 371rpx;
+  vertical-align: bottom;
+}
+
+.new_user_box {
+  margin-top: 51rpx;
+  margin-bottom: 5rpx;
+}
+
+.user_01 {
+  font-size: 25rpx;
+  color: #ff7200;
+}
+
+.user_02 {
+  font-size: 18rpx;
+  color: #ff7200;
+}
+
+.user_menage_box {
+  width: 718rpx;
+  height: 119rpx;
+  border-radius: 12rpx;
+  background-color: #fff;
+  margin-bottom: 24rpx;
+}
+
+.user_privat {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 60%;
+}
+
+.menage_box {
+  height: 119rpx;
+  padding: 0 20rpx;
+}
+
+.user_invite {
+  margin-left: 17rpx;
+}
+
+.index01_icon_img {
+  width: 38rpx;
+  height: 45rpx;
+  padding-left: 5rpx;
+}
+
+.icon_left {
+  padding-left: 5rpx;
+}
+
+.index02_icon_img {
+  width: 36rpx;
+  height: 43rpx;
+  padding-left: 5rpx;
+}
+
+.index03_icon_img {
+  width: 36rpx;
+  height: 45rpx;
+  padding-left: 5rpx;
+}
+
+.share_box, .frend_share_box, .share_box_btn {
+  width: 164rpx;
+  height: 74rpx;
+  text-align: center;
+}
+
+.share_box .share, .share_box_btn {
+  height: 74rpx;
+  line-height: 74rpx;
+  background-color: #ef6b5a;
+  border-radius: 60rpx;
+  color: #fff;
+}
+
+.share_box_btn_no {
+  background-color: #999;
+}
+
+.share {
+  background: transparent;
+  padding: 0;
+}
+
+button::after {
+  border: none;
+}
+
+.my_frends {
+  margin-top: 56rpx;
+  margin-bottom: 5rpx;
+}
+
+.frend_share_box {
+  height: 74rpx;
+  line-height: 74rpx;
+  background-color: #999;
+  border-radius: 60rpx;
+  color: #fff;
+}
+
+.bg_font {
+  background-color: #ef6b5a;
+  color: #333;
+}
+
+.frend_nick {
+  font-size: 26rpx;
+}
+
+.frend_money {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.btn_01_img, .img_w {
+  width: 258rpx;
+  height: 99rpx;
+}
+
+.btn_02_img {
+  width: 356rpx;
+  height: 99rpx;
+}
+
+.btn_box {
+  padding: 0 31rpx;
+}
+
+.modle_all_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+}
+
+.all_box {
+  width: 624rpx;
+  height: 140rpx;
+  background-color: #ffffff;
+  border-radius: 12rpx;
+  padding: 46rpx 35rpx;
+}
+
+.all_btn {
+  font-size: 34rpx;
+  color: #67cd2f;
+  text-align: right;
+  margin-top: 70rpx;
+}

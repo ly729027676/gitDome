@@ -1,0 +1,52 @@
+<template name="tem_rob_nav">
+
+  <view class='box box-lr box-pack-center'>
+    <view class='flex1 box-center-center position_r'>
+      <block wx:if="{{showNav == 1}}">
+        <image class='index01_big_btn_img' src='../../static/images/index02_big_btn.png'></image>
+      </block>
+      <block wx:else>
+        <image class='index01_btn_img' bindtap='toNotice' src='../../static/images/index02_btn.png'></image>
+      </block>
+      <view class='rob_red_box'>
+        1
+      </view>
+    </view>
+    <view class='flex1 box-center-center'>
+      <view class='position_r'>
+        <block wx:if="{{showNav == 2}}">
+          <image class='index01_big_btn_img' src='../../static/images/index02_big01_btn.png'></image>
+          <view class='rob_nav_num_box'>
+            {{fist_count}}/10
+          </view>
+        </block>
+        <block wx:else>
+          <image class='index01_btn_img' bindtap='toIndex' src='../../static/images/index01_btn.png'></image>
+        </block>
+      </view>
+    </view>
+    <view class='flex1 box-center-center position_r'>
+      <block wx:if="{{showNav == 3}}">
+        <image class='index01_big_btn_img' src='../../static/images/index03_big_btn.png'></image>
+      </block>
+      <block wx:else>
+        <image class='index01_btn_img' bindtap='toLying' src='../../static/images/index03_btn.png'></image>
+      </block>
+      <view class='rob_red_box'>
+        1
+      </view>
+    </view>
+  </view>
+
+  <block wx:if="{{showNav == 2}}">
+    <view class='box box-pack-center'>
+      <block wx:if="{{fist_count == 10}}">
+        <view class='nav_full'>拳头已满</view>
+      </block>
+      <block wx:else>
+        <view class='nav_full'>{{_date.m}}:{{_date.s}}增加一个拳头</view>
+      </block>
+    </view>
+  </block>
+
+</template>

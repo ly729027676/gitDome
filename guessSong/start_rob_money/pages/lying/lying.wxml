@@ -1,0 +1,67 @@
+<import src="../../../template/rob_nav/index.wxml" />
+
+<view class='index_wrap'>
+  <!-- <image class='index_bg_img' src='../../../static/images/index_bg.png'></image> -->
+  <!-- 底部背景 -->
+  <view class='index02_box'>
+    <image class='index02_img' src='../../../static/images/index02_bg.png'></image>
+  </view>
+
+  <!-- 能量导航栏 -->
+  <view class='index_nav_box'>
+    <template is="tem_rob_nav" data="{{energyNum,_date,showNav}}"></template>
+
+    <!-- 总收益 -->
+    <view class='earnings_box box box-tb box-pack-center box-center-center'>
+      <view class='flex1'>总收益</view>
+      <view class='flex1' style='font-size: 50rpx;'>￥0</view>
+    </view>
+
+    <!-- 邀请新用户加入 -->
+    <view class='box box-lr box-pack-between new_user_box'>
+      <view class='flex1'>
+        <text class='user_01'>我的打工仔</text>
+      </view>
+      <view class='flex1 box box-pack-end box-align-end'>
+        <text class='user_02'>打工仔拆红包，自己可得0.02~0.05元</text>
+      </view>
+    </view>
+
+    <!-- 没有好友列表数据 -->
+    <!-- <view class='frends_no_box box box-lr box-pack-center box-align-center' style="height: {{isIpx ? '60' : '41'}}%;">
+      您还没邀请到打工仔
+    </view> -->
+    <!-- 好友列表 -->
+    <scroll-view scroll-y="true">
+      <view class='user_menage_box'>
+        <view class='box box-lr box-pack-between menage_box'>
+          <view class='flex2 box box-lr box-align-center'>
+            <view class='flex1 box box-align-center'>
+              <image class='user_privat' src=''></image>
+            </view>
+            <view class='flex3 box box-lr' style='margin-left: 10rpx;'>
+              <view class='flex1'>
+                <text class='frend_nick'>小秘书</text>
+              </view>
+            </view>
+          </view>
+          <view class='flex2 box box-align-center box-pack-end lying_money'>
+            已为我挣到0.02元
+          </view>
+        </view>
+      </view>
+
+    </scroll-view>
+
+    <view class='footer_box'>
+      <view class='btn_box box box-lr box-pack-center' style='margin-top: 20rpx'>
+        <view>
+          <image class='btn_03_img' src='../../static/images/btn_03.png'></image>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

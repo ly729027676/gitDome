@@ -1,0 +1,48 @@
+<import src="../../../template/rob_nav/index.wxml" />
+
+<view class='index_wrap'>
+  <!-- <image class='index_bg_img' src='../../../static/images/index_bg.png'></image> -->
+  <!-- 底部背景 -->
+  <view class='index02_box'>
+    <image class='index02_img' src='../../../static/images/index02_bg.png'></image>
+  </view>
+
+  <!-- 能量导航栏 -->
+  <view class='index_nav_box'>
+    <template is="tem_rob_nav" data="{{fist_count,_date,showNav}}"></template>
+
+    <!-- 没有好友列表数据 -->
+    <!-- <view class='frends_no_box box box-lr box-pack-center box-align-center' style="height:100%;">
+      还没抢过别人的钱
+    </view> -->
+    <!-- 好友列表 -->
+    <scroll-view scroll-y="true" style="height: {{isIpx ? '75' : '70'}}%;margin-top: 39rpx;">
+      <view class='user_menage_box'>
+        <view class='box box-lr box-pack-between menage_box'>
+          <view class='flex2 box box-lr box-align-center'>
+            <view class='flex1 box box-align-center'>
+              <image class='user_privat' src=''></image>
+            </view>
+            <view class='flex3 box box-tb' style='margin-left:-20rpx;'>
+              <view class='flex1'>
+                <text class='frend_nick'>小秘书抢了我：￥0.2</text>
+              </view>
+              <view class='flex1'>
+                <text class='frend_money'>余额：0.1~0.5元</text>
+              </view>
+            </view>
+          </view>
+          <view class='flex1 box box-align-center box-pack-end'>
+            <view class='frend_share_box'>
+              已抢过
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </scroll-view>
+
+  </view>
+
+
+</view>

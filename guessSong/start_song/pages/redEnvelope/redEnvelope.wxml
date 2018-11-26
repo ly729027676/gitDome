@@ -1,0 +1,27 @@
+<view class='redEnvelope_wrap'>
+  <image class='index_bg_img' src='../../../static/images/index_bg.png'></image>
+
+  <!-- 挑战成功 -->
+  <view class='redEnvelope_01_box'>
+    <image class='redEnvelope_01_img' src='../../static/images/redEnvelope_01.png'></image>
+  </view>
+
+  <!-- 红包背景 -->
+  <view class='redEnvelope_03_box'>
+    <image class='redEnvelope_03_img' src='../../static/images/redEnvelope_03.png'></image>
+    <!-- 红包金额 -->
+    <view class='redEnvelope_money_box'>
+      <text class='money_box'>0.45</text>元
+    </view>
+  </view>
+
+  <!-- 领取按钮 -->
+  <view class='redEnvelope_btn'>
+    <image class='redEnvelope_04_img' src='../../static/images/redEnvelope_04.png'></image>
+  </view>
+
+  <!-- 底部背景 -->
+  <view class='index02_box'>
+    <image class='redEnvelope_02_img' src='../../static/images/redEnvelope_02.png'></image>
+  </view>
+</view>

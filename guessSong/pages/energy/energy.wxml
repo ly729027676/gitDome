@@ -1,0 +1,83 @@
+<!--pages/energy/energy.wxml-->
+<view class='enegy_wrap'>
+  <image class='user_bg_img' src='../../static/images/user_bg.png'></image>
+  <!-- 剩余次数 -->
+  <view class='enegy_num_box'>
+    <view class='position_r'>
+      <image class='index03_bg_img' src='../../static/images/index03_bg.png'></image>
+      <view class='num_box'>
+        <view class='num'>1</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='enegy_count_box'>
+    <view class='count_box'>
+      剩余0次机会次数
+    </view>
+  </view>
+
+  <view class='enegy_item_box'>
+    <view class='item_box'>
+      <view class='box box-lr box-pack-between'>
+        <view class='flex1 box box-align-center'>
+          <view>
+            <image class='energy_pravit' src=''></image>
+          </view>
+          <view class='energy_name'>颜值测试</view>
+        </view>
+        <view class='flex1 box box-pack-end'>
+          <view class='box box-center-center' style='margin-right: 40rpx;'>
+            <image class='enegy_img' src='../../static/images/enegy.png'></image>
+            <text>+1</text>
+          </view>
+        </view>
+      </view>
+      <view class='box box-lr box-pack-between box-align-center'>
+        <view class='flex2 wx_name'>
+          微信授权后，试玩小程序15秒
+        </view>
+        <view class='flex1 box box-pack-end'>
+          <view class='wx_btn'>去领取</view>
+        </view>
+      </view>
+
+      <view class='box' style='margin-top: 10rpx;'>
+        <view class='wx_img'>
+        
+        </view>
+      </view>
+    </view>
+
+    <view class='item_box'>
+      <view class='box box-lr box-pack-between'>
+        <view class='flex1 box box-align-center'>
+          <view>
+            <image class='energy_pravit' src=''></image>
+          </view>
+          <view class='energy_name'>颜值测试</view>
+        </view>
+        <view class='flex1 box box-pack-end'>
+          <view class='box box-center-center' style='margin-right: 40rpx;'>
+            <image class='enegy_img' src='../../static/images/enegy.png'></image>
+            <text>+1</text>
+          </view>
+        </view>
+      </view>
+      <view class='box box-lr box-pack-between box-align-center'>
+        <view class='flex2 wx_name'>
+          微信授权后，试玩小程序15秒
+        </view>
+        <view class='flex1 box box-pack-end'>
+          <view class='wx_btn'>去领取</view>
+        </view>
+      </view>
+
+      <view class='box' style='margin-top: 10rpx;'>
+        <view class='wx_img'>
+        
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
