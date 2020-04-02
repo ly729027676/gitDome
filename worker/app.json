@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index/index",
+    "pages/message/index/index",
+    "pages/serve/index/index",
+    "pages/my/index/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#999999",
+    "selectedColor": "#F24E42",
+    "list": [
+      {
+        "iconPath": "./static/image/icon1-no.png",
+        "selectedIconPath": "./static/image/icon1-yes.png",
+        "pagePath": "pages/index/index/index",
+        "text": "工程"
+      },
+      {
+        "iconPath": "./static/image/icon2-no.png",
+        "selectedIconPath": "./static/image/icon2-yes.png",
+        "pagePath": "pages/message/index/index",
+        "text": "消息"
+      },
+      {
+        "iconPath": "./static/image/icon3-no.png",
+        "selectedIconPath": "./static/image/icon3-yes.png",
+        "pagePath": "pages/serve/index/index",
+        "text": "服务"
+      },
+      {
+        "iconPath": "./static/image/icon4-no.png",
+        "selectedIconPath": "./static/image/icon4-yes.png",
+        "pagePath": "pages/my/index/index",
+        "text": "我的"
+      }
+     
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

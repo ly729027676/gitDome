@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="index-wrap">
+  <view>{{location}}</view>
+
+  <block wx:if="{{isAuthorize}}">
+    <v-login bind:getDataEvent="getData"></v-login>
+  </block>
+
+  <block wx:if="{{has_location}}">
+    <view class='authorize-bg' bindtap="getLocation"></view>
+  </block>
+</view>

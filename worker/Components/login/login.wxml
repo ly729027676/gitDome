@@ -1,0 +1,5 @@
+<!--Components/login/login.wxml-->
+<view>
+  <!--用户授权-->
+  <button class='authorize-bg' plain="true" open-type="getUserInfo" bindgetuserinfo="handleAuthorize"></button>
+</view>

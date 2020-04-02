@@ -1,0 +1,5 @@
+<!--pages/index/location/index.wxml-->
+<view class="index-wrap">
+  <view>{{location}}</view>
+    <v-login isAuthorize="{{is-authorize}}"></v-login>
+</view>
